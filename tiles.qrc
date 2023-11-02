@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="0.png">tile-images/0.png</file>
+        <file alias="1.png">tile-images/1.png</file>
+        <file alias="2.png">tile-images/2.png</file>
+        <file alias="3.png">tile-images/3.png</file>
+        <file alias="4.png">tile-images/4.png</file>
+        <file alias="5.png">tile-images/5.png</file>
+        <file alias="6.png">tile-images/6.png</file>
+        <file alias="7.png">tile-images/7.png</file>
+        <file alias="8.png">tile-images/8.png</file>
+        <file alias="covered.png">tile-images/covered.png</file>
+        <file alias="mine.png">tile-images/mine.png</file>
+        <file alias="flag.png">tile-images/flag.png</file>
+    </qresource>
+</RCC>

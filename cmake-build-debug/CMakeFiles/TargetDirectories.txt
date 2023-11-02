@@ -1,0 +1,5 @@
+/Users/aaronhall/cs335/mine-sweeper 3/cmake-build-debug/CMakeFiles/mine-sweeper.dir
+/Users/aaronhall/cs335/mine-sweeper 3/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/aaronhall/cs335/mine-sweeper 3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/aaronhall/cs335/mine-sweeper 3/cmake-build-debug/CMakeFiles/mine-sweeper_autogen_timestamp_deps.dir
+/Users/aaronhall/cs335/mine-sweeper 3/cmake-build-debug/CMakeFiles/mine-sweeper_autogen.dir

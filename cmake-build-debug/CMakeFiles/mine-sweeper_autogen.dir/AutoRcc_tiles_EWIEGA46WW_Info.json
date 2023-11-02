@@ -1,0 +1,33 @@
+{
+	"BUILD_DIR" : "/Users/aaronhall/cs335/mine-sweeper 3/cmake-build-debug/mine-sweeper_autogen",
+	"CMAKE_BINARY_DIR" : "/Users/aaronhall/cs335/mine-sweeper 3/cmake-build-debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/Users/aaronhall/cs335/mine-sweeper 3/cmake-build-debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/Users/aaronhall/cs335/mine-sweeper 3",
+	"CMAKE_SOURCE_DIR" : "/Users/aaronhall/cs335/mine-sweeper 3",
+	"INCLUDE_DIR" : "/Users/aaronhall/cs335/mine-sweeper 3/cmake-build-debug/mine-sweeper_autogen/include",
+	"INPUTS" : 
+	[
+		"/Users/aaronhall/cs335/mine-sweeper 3/tile-images/2.png",
+		"/Users/aaronhall/cs335/mine-sweeper 3/tile-images/covered.png",
+		"/Users/aaronhall/cs335/mine-sweeper 3/tile-images/3.png",
+		"/Users/aaronhall/cs335/mine-sweeper 3/tile-images/4.png",
+		"/Users/aaronhall/cs335/mine-sweeper 3/tile-images/7.png",
+		"/Users/aaronhall/cs335/mine-sweeper 3/tile-images/6.png",
+		"/Users/aaronhall/cs335/mine-sweeper 3/tile-images/1.png",
+		"/Users/aaronhall/cs335/mine-sweeper 3/tile-images/flag.png",
+		"/Users/aaronhall/cs335/mine-sweeper 3/tile-images/8.png",
+		"/Users/aaronhall/cs335/mine-sweeper 3/tile-images/5.png",
+		"/Users/aaronhall/cs335/mine-sweeper 3/tile-images/mine.png",
+		"/Users/aaronhall/cs335/mine-sweeper 3/tile-images/0.png"
+	],
+	"LOCK_FILE" : "/Users/aaronhall/cs335/mine-sweeper 3/cmake-build-debug/CMakeFiles/mine-sweeper_autogen.dir/AutoRcc_tiles_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "tiles" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_tiles.cpp",
+	"RCC_EXECUTABLE" : "/Users/aaronhall/QT/6.4.2/macos/./libexec/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/Users/aaronhall/cs335/mine-sweeper 3/cmake-build-debug/CMakeFiles/mine-sweeper_autogen.dir/AutoRcc_tiles_EWIEGA46WW_Used.txt",
+	"SOURCE" : "/Users/aaronhall/cs335/mine-sweeper 3/tiles.qrc",
+	"VERBOSITY" : 0
+}
