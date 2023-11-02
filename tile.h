@@ -13,7 +13,7 @@ class Tile : public QObject, public std::enable_shared_from_this<Tile>  {
 public:
 
     enum Type {
-        wall, empty, one, two, three
+        wall, empty, start, end, path
     };
 
     explicit Tile(QObject* parent = nullptr, Type type = empty);
@@ -21,9 +21,13 @@ public:
     [[nodiscard]] const QIcon& icon() const {
         static QIcon wall(":/wall.png");
         static QIcon empty(":/empty.png");
+        static QIcon start(":/start.png");
+        static QIcon end(":/end.png");
         switch (m_type) {
             case Type::empty: return empty; break;
             case Type::wall: return wall; break;
+            case Type::start: return start; break;
+            case Type::end: return end; break;
         }
     }
 

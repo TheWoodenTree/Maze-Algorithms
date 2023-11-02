@@ -1,9 +1,9 @@
 <RCC>
     <qresource prefix="/">
         <file alias="empty.png">tile-images/empty.png</file>
-        <file alias="1.png">tile-images/1.png</file>
-        <file alias="2.png">tile-images/2.png</file>
-        <file alias="3.png">tile-images/3.png</file>
+        <file alias="start.png">tile-images/start.png</file>
+        <file alias="end.png">tile-images/end.png</file>
+        <file alias="path.png">tile-images/path.png</file>
         <file alias="4.png">tile-images/4.png</file>
         <file alias="5.png">tile-images/5.png</file>
         <file alias="6.png">tile-images/6.png</file>

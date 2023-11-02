@@ -10,14 +10,14 @@ Tile::Tile(QObject* parent, Type type) : QObject(parent), m_type(type) {
         case empty:
             m_empty = QIcon(":/empty.png");
             break;
-        case one:
-            m_empty = QIcon(":/1.png");
+        case start:
+            m_empty = QIcon(":/start.png");
             break;
-        case two:
-            m_empty = QIcon(":/2.png");
+        case end:
+            m_empty = QIcon(":/end.png");
             break;
-        case three:
-            m_empty = QIcon(":/3.png");
+        case path:
+            m_empty = QIcon(":/path.png");
             break;
     }
     assert(!m_empty.isNull());
@@ -36,14 +36,14 @@ void Tile::setType(Type type)  {
         case empty:
             m_empty = QIcon(":/empty.png");
             break;
-        case one:
-            m_empty = QIcon(":/1.png");
+        case start:
+            m_empty = QIcon(":/start.png");
             break;
-        case two:
-            m_empty = QIcon(":/2.png");
+        case end:
+            m_empty = QIcon(":/end.png");
             break;
-        case three:
-            m_empty = QIcon(":/3.png");
+        case path:
+            m_empty = QIcon(":/path.png");
             break;
     }
 }

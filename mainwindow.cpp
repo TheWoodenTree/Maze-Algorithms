@@ -14,7 +14,12 @@ MainWindow::MainWindow(QWidget* parent) :
     m_remainingFlags = NUMBER_OF_MINES;
     const QSize TILE_SIZE(16, 16);
     for (int i = 0; i < NUMBER_OF_TILES; ++i) {
-        Tile::Type tileType = Tile::empty;
+        Tile::Type tileType;
+        if (i == 0)
+            tileType = Tile::start;
+        else if (i == NUMBER_OF_TILES - 1)
+            tileType = Tile::end;
+        else tileType = Tile::empty;
         std::shared_ptr<Tile> tile = std::make_shared<Tile>(parent, tileType);
         m_tiles.push_back(tile);
         std::shared_ptr<TileButton> button = std::make_shared<TileButton>(parent, tile);
@@ -39,7 +44,6 @@ MainWindow::MainWindow(QWidget* parent) :
 
     }
 
-    shuffle();
     sync();
 
 }

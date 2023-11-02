@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/jason/Documents/GitHub/Maze-Algorithms
+# Install script for directory: C:/Users/matth/OneDrive/Documents/GitHub/Maze-Algorithms
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/jason/Documents/GitHub/Maze-Algorithms/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/matth/OneDrive/Documents/GitHub/Maze-Algorithms/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
