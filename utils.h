@@ -5,8 +5,8 @@
 #ifndef MINE_SWEEPER_UTILS_H
 #define MINE_SWEEPER_UTILS_H
 
-static const int NUMBER_OF_ROWS = 48;
-static const int NUMBER_OF_COLUMNS = 48;
+static const int NUMBER_OF_ROWS = 32;
+static const int NUMBER_OF_COLUMNS = 32;
 static const int NUMBER_OF_TILES = NUMBER_OF_ROWS * NUMBER_OF_COLUMNS;
 static const int NUMBER_OF_MINES = 360;
 static const int NUMBER_OF_FLAGS = NUMBER_OF_MINES;

@@ -13,7 +13,7 @@ class Tile : public QObject, public std::enable_shared_from_this<Tile>  {
 public:
 
     enum Type {
-        wall, empty, one, two, three, four, five, six, seven, eight, mine
+        wall, empty, one, two, three
     };
 
     explicit Tile(QObject* parent = nullptr, Type type = empty);

@@ -12,8 +12,6 @@ MainWindow::MainWindow(QWidget* parent) :
         QMainWindow(nullptr), ui(new Ui::MainWindow) {
     ui->setupUi(this);
     m_remainingFlags = NUMBER_OF_MINES;
-    ui->flagsLabel->setText("Flags: " + QString::number(m_remainingFlags) + "/" + QString::number(NUMBER_OF_FLAGS));
-    ui->clearedLabel->setText("Cleared: 0/" + QString::number(NUMBER_OF_CLEARABLE_TILES));
     const QSize TILE_SIZE(16, 16);
     for (int i = 0; i < NUMBER_OF_TILES; ++i) {
         Tile::Type tileType = Tile::empty;
@@ -44,24 +42,12 @@ MainWindow::MainWindow(QWidget* parent) :
     shuffle();
     sync();
 
-    QObject::connect(ui->shuffleButton, SIGNAL(clicked()),
-                     this, SLOT(shuffle()));
-    QObject::connect(ui->quitButton, SIGNAL(clicked()),
-                     this, SLOT(quit()));
 }
 
 MainWindow::~MainWindow() {
     delete ui;
 }
 
-void MainWindow::updateFlagsLabel(int remainingFlags) {
-    ui->flagsLabel->setText("Flags: " + QString::number(remainingFlags) + "/" + QString::number(NUMBER_OF_FLAGS));
-}
-
-void MainWindow::updateClearedTilesLabel(int numClearedTiles) {
-    ui->clearedLabel->setText(
-            "Cleared: " + QString::number(numClearedTiles) + "/" + QString::number(NUMBER_OF_CLEARABLE_TILES));
-}
 
 void MainWindow::quit() {
     QApplication::quit();
@@ -103,7 +89,6 @@ void MainWindow::tileRightClicked(const std::shared_ptr<Tile>& tile) {
     else {
         m_remainingFlags += 1;
     }
-    updateFlagsLabel(m_remainingFlags);
     sync();
 }
 
@@ -167,8 +152,6 @@ void MainWindow::reset(QAbstractButton* button) {
     }
     m_numClearedTiles = 0;
     m_remainingFlags = NUMBER_OF_FLAGS;
-    updateClearedTilesLabel(m_numClearedTiles);
-    updateFlagsLabel(m_remainingFlags);
     shuffle();
 }
 
@@ -183,25 +166,23 @@ void MainWindow::shuffle() {
 
 // Recursively reveal all connected "empty" tiles until a bomb-adjacent tile is revealed
 void MainWindow::revealConnectedTiles(const std::shared_ptr<Tile>& tile) { // NOLINT(misc-no-recursion)
-    Tile::Type tileType = tile->getType();
-    auto adjacentTilesMap = tile->getAdjacentTilesMap();
-    for (const auto& pair : adjacentTilesMap) {
-        std::shared_ptr<Tile> adjacentTile = pair.second;
-        Tile::Type adjTileType = adjacentTile->getType();
-        if (!adjacentTile->isWall() && tileType == Tile::empty && !adjacentTile->isFlagged()) {
-            if (adjTileType == Tile::empty) {
-                adjacentTile->flip();
-                m_numClearedTiles += 1;
-                updateClearedTilesLabel(m_numClearedTiles);
-                revealConnectedTiles(adjacentTile);
-            }
-            else if (adjTileType != Tile::mine) {
-                adjacentTile->flip();
-                m_numClearedTiles += 1;
-                updateClearedTilesLabel(m_numClearedTiles);
-            }
-        }
-    }
+//    Tile::Type tileType = tile->getType();
+//    auto adjacentTilesMap = tile->getAdjacentTilesMap();
+//    for (const auto& pair : adjacentTilesMap) {
+//        std::shared_ptr<Tile> adjacentTile = pair.second;
+//        Tile::Type adjTileType = adjacentTile->getType();
+//        if (!adjacentTile->isWall() && tileType == Tile::empty && !adjacentTile->isFlagged()) {
+//            if (adjTileType == Tile::empty) {
+//                adjacentTile->flip();
+//                m_numClearedTiles += 1;
+//                revealConnectedTiles(adjacentTile);
+//            }
+//            else if (adjTileType != Tile::mine) {
+//                adjacentTile->flip();
+//                m_numClearedTiles += 1;
+//            }
+//        }
+//    }
 }
 
 void MainWindow::message(const QString& message) const {

@@ -794,6 +794,20 @@ CMakeFiles/mine-sweeper.dir/mainwindow.cpp.obj: C:/Users/jason/Documents/GitHub/
   C:/Qt/6.4.2/mingw_64/include/QtGui/qinputmethod.h \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qlocale.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qguiapplication_platform.h \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/QComboBox \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/qcombobox.h \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/qstyleoption.h \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/qabstractspinbox.h \
+  C:/Qt/6.4.2/mingw_64/include/QtGui/qvalidator.h \
+  C:/Qt/6.4.2/mingw_64/include/QtCore/qregularexpression.h \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/qslider.h \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/qabstractslider.h \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/qstyle.h \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/qtabbar.h \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/qrubberband.h \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/qframe.h \
+  C:/Qt/6.4.2/mingw_64/include/QtCore/qabstractitemmodel.h \
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/QGridLayout \
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/qgridlayout.h \
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/qlayout.h \
@@ -802,15 +816,14 @@ CMakeFiles/mine-sweeper.dir/mainwindow.cpp.obj: C:/Users/jason/Documents/GitHub/
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/qgridlayout.h \
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/QHBoxLayout \
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/qboxlayout.h \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/QLCDNumber \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/qlcdnumber.h \
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/QLabel \
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/qlabel.h \
-  C:/Qt/6.4.2/mingw_64/include/QtWidgets/qframe.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qpicture.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qtextdocument.h \
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/QMainWindow \
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/QPushButton \
-  C:/Qt/6.4.2/mingw_64/include/QtWidgets/QSpacerItem \
-  C:/Qt/6.4.2/mingw_64/include/QtWidgets/qlayoutitem.h \
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/QVBoxLayout \
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/QWidget \
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/qwidget.h \
@@ -2053,6 +2066,8 @@ C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/mingw/x86_64-w64-mingw32/include
 
 C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/mingw/x86_64-w64-mingw32/include/corecrt_wstdlib.h:
 
+C:/Qt/6.4.2/mingw_64/include/QtWidgets/qstyle.h:
+
 C:/Qt/6.4.2/mingw_64/include/QtCore/qsize.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/mingw/x86_64-w64-mingw32/include/stdlib.h:
@@ -2327,6 +2342,8 @@ C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32
 
 C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/vector.tcc:
 
+C:/Qt/6.4.2/mingw_64/include/QtGui/qvalidator.h:
+
 C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_algo.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h:
@@ -2461,6 +2478,8 @@ C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32
 
 C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/basic_string.h:
 
+C:/Qt/6.4.2/mingw_64/include/QtWidgets/qstyleoption.h:
+
 C:/Users/jason/Documents/GitHub/Maze-Algorithms/mainwindow.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/string_view.tcc:
@@ -2482,8 +2501,6 @@ C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32
 C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cassert:
 
 C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h:
-
-C:/Qt/6.4.2/mingw_64/include/QtWidgets/QSpacerItem:
 
 C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/memory:
 
@@ -2509,6 +2526,8 @@ C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32
 
 C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/pstl/glue_memory_defs.h:
 
+C:/Qt/6.4.2/mingw_64/include/QtWidgets/qslider.h:
+
 C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/algorithm:
 
 C:/Qt/6.4.2/mingw_64/include/QtCore/qbytearrayalgorithms.h:
@@ -2518,6 +2537,8 @@ C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/mingw/x86_64-w64-mingw32/include
 C:/Qt/6.4.2/mingw_64/include/QtCore/qbytearrayview.h:
 
 C:/Qt/6.4.2/mingw_64/include/QtCore/qstringliteral.h:
+
+C:/Qt/6.4.2/mingw_64/include/QtWidgets/QComboBox:
 
 C:/Qt/6.4.2/mingw_64/include/QtCore/qiodevicebase.h:
 
@@ -2540,6 +2561,8 @@ C:/Qt/6.4.2/mingw_64/include/QtWidgets/qlayoutitem.h:
 C:/Qt/6.4.2/mingw_64/include/QtCore/qhashfunctions.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/numeric:
+
+C:/Qt/6.4.2/mingw_64/include/QtWidgets/qlcdnumber.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/pstl/glue_numeric_defs.h:
 
@@ -2626,6 +2649,8 @@ C:/Qt/6.4.2/mingw_64/include/QtGui/qimage.h:
 C:/Qt/6.4.2/mingw_64/include/QtGui/qpixelformat.h:
 
 C:/Qt/6.4.2/mingw_64/include/QtGui/qpolygon.h:
+
+C:/Qt/6.4.2/mingw_64/include/QtWidgets/qcombobox.h:
 
 C:/Qt/6.4.2/mingw_64/include/QtGui/qguiapplication_platform.h:
 
@@ -2719,13 +2744,31 @@ mine-sweeper_autogen/include/ui_mainwindow.h:
 
 C:/Qt/6.4.2/mingw_64/include/QtGui/QAction:
 
+C:/Qt/6.4.2/mingw_64/include/QtWidgets/qabstractitemdelegate.h:
+
+C:/Qt/6.4.2/mingw_64/include/QtWidgets/qabstractspinbox.h:
+
+C:/Qt/6.4.2/mingw_64/include/QtCore/qregularexpression.h:
+
+C:/Qt/6.4.2/mingw_64/include/QtWidgets/qabstractslider.h:
+
+C:/Qt/6.4.2/mingw_64/include/QtWidgets/qtabbar.h:
+
+mine-sweeper_autogen/mocs_compilation.cpp:
+
+C:/Qt/6.4.2/mingw_64/include/QtWidgets/qrubberband.h:
+
+C:/Qt/6.4.2/mingw_64/include/QtWidgets/qframe.h:
+
+C:/Qt/6.4.2/mingw_64/include/QtCore/qabstractitemmodel.h:
+
 C:/Qt/6.4.2/mingw_64/include/QtWidgets/QGridLayout:
 
 C:/Qt/6.4.2/mingw_64/include/QtWidgets/qboxlayout.h:
 
 C:/Qt/6.4.2/mingw_64/include/QtWidgets/QHBoxLayout:
 
-C:/Qt/6.4.2/mingw_64/include/QtWidgets/qframe.h:
+C:/Qt/6.4.2/mingw_64/include/QtWidgets/QLCDNumber:
 
 C:/Qt/6.4.2/mingw_64/include/QtWidgets/QMessageBox:
 
@@ -2734,8 +2777,6 @@ C:/Qt/6.4.2/mingw_64/include/QtWidgets/qmessagebox.h:
 mine-sweeper_autogen/EWIEGA46WW/moc_tile.cpp:
 
 mine-sweeper_autogen/EWIEGA46WW/qrc_tiles.cpp:
-
-mine-sweeper_autogen/mocs_compilation.cpp:
 
 mine-sweeper_autogen/EWIEGA46WW/moc_tileButton.cpp:
 

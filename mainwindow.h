@@ -21,9 +21,7 @@ public:
 
     ~MainWindow() override;
 
-    void updateFlagsLabel(int remainingFlags);
 
-    void updateClearedTilesLabel(int numClearedTiles);
 
 signals:
 

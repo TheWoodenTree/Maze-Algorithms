@@ -16,6 +16,60 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>5</number>
+      </property>
+      <item alignment="Qt::AlignTop">
+       <widget class="QLabel" name="label">
+        <property name="maximumSize">
+         <size>
+          <width>85</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="lineWidth">
+         <number>1</number>
+        </property>
+        <property name="text">
+         <string>Algorithms:</string>
+        </property>
+        <property name="margin">
+         <number>3</number>
+        </property>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignTop">
+       <widget class="QComboBox" name="algorithmBox">
+        <property name="maximumSize">
+         <size>
+          <width>150</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <item>
+         <property name="text">
+          <string>Dijkstra's</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Depth-First</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Breadth-First</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignRight|Qt::AlignTop">
+       <widget class="QLCDNumber" name="lcdNumber"/>
+      </item>
+     </layout>
+    </item>
+    <item>
      <layout class="QGridLayout" name="gridLayout">
       <property name="spacing">
        <number>0</number>
@@ -23,51 +77,62 @@
      </layout>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <widget class="QPushButton" name="shuffleButton">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="1" column="1">
+       <widget class="QPushButton" name="setEndButton">
         <property name="text">
-         <string>Shuffle</string>
+         <string>Set End</string>
         </property>
        </widget>
       </item>
-      <item>
-       <widget class="QPushButton" name="quitButton">
+      <item row="0" column="1">
+       <widget class="QPushButton" name="setStartButton">
         <property name="text">
-         <string>Quit</string>
+         <string>Set Start</string>
         </property>
        </widget>
       </item>
-     </layout>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
-      <item>
-       <widget class="QLabel" name="flagsLabel">
+      <item row="2" column="0">
+       <widget class="QPushButton" name="clearButton">
         <property name="text">
-         <string>TextLabel</string>
+         <string>Clear Walls</string>
         </property>
        </widget>
       </item>
-      <item>
-       <widget class="QLabel" name="clearedLabel">
+      <item row="0" column="0">
+       <widget class="QPushButton" name="generateButton">
         <property name="text">
-         <string>TextLabel</string>
+         <string>Generate Maze</string>
         </property>
        </widget>
       </item>
-      <item>
-       <spacer name="horizontalSpacer">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="customButton">
+        <property name="text">
+         <string>Custom Maze</string>
         </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QPushButton" name="pauseButton">
+        <property name="text">
+         <string>Pause Traversal</string>
         </property>
-       </spacer>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="guantletButton">
+        <property name="text">
+         <string>Algorithm Guantlet</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QPushButton" name="resetButton">
+        <property name="text">
+         <string>Reset Algorithm</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>

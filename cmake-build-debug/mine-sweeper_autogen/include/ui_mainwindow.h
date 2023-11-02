@@ -12,12 +12,13 @@
 #include <QtCore/QVariant>
 #include <QtGui/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QLCDNumber>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -29,14 +30,20 @@ public:
     QAction *actionQuit;
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout_2;
-    QGridLayout *gridLayout;
     QHBoxLayout *horizontalLayout;
-    QPushButton *shuffleButton;
-    QPushButton *quitButton;
-    QHBoxLayout *horizontalLayout_2;
-    QLabel *flagsLabel;
-    QLabel *clearedLabel;
-    QSpacerItem *horizontalSpacer;
+    QLabel *label;
+    QComboBox *algorithmBox;
+    QLCDNumber *lcdNumber;
+    QGridLayout *gridLayout;
+    QGridLayout *gridLayout_2;
+    QPushButton *setEndButton;
+    QPushButton *setStartButton;
+    QPushButton *clearButton;
+    QPushButton *generateButton;
+    QPushButton *customButton;
+    QPushButton *pauseButton;
+    QPushButton *guantletButton;
+    QPushButton *resetButton;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -49,45 +56,84 @@ public:
         centralwidget->setObjectName("centralwidget");
         verticalLayout_2 = new QVBoxLayout(centralwidget);
         verticalLayout_2->setObjectName("verticalLayout_2");
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setSpacing(5);
+        horizontalLayout->setObjectName("horizontalLayout");
+        label = new QLabel(centralwidget);
+        label->setObjectName("label");
+        label->setMaximumSize(QSize(85, 16777215));
+        label->setLineWidth(1);
+        label->setMargin(3);
+
+        horizontalLayout->addWidget(label, 0, Qt::AlignTop);
+
+        algorithmBox = new QComboBox(centralwidget);
+        algorithmBox->addItem(QString());
+        algorithmBox->addItem(QString());
+        algorithmBox->addItem(QString());
+        algorithmBox->setObjectName("algorithmBox");
+        algorithmBox->setMaximumSize(QSize(150, 16777215));
+
+        horizontalLayout->addWidget(algorithmBox, 0, Qt::AlignTop);
+
+        lcdNumber = new QLCDNumber(centralwidget);
+        lcdNumber->setObjectName("lcdNumber");
+
+        horizontalLayout->addWidget(lcdNumber, 0, Qt::AlignRight|Qt::AlignTop);
+
+
+        verticalLayout_2->addLayout(horizontalLayout);
+
         gridLayout = new QGridLayout();
         gridLayout->setSpacing(0);
         gridLayout->setObjectName("gridLayout");
 
         verticalLayout_2->addLayout(gridLayout);
 
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName("horizontalLayout");
-        shuffleButton = new QPushButton(centralwidget);
-        shuffleButton->setObjectName("shuffleButton");
+        gridLayout_2 = new QGridLayout();
+        gridLayout_2->setObjectName("gridLayout_2");
+        setEndButton = new QPushButton(centralwidget);
+        setEndButton->setObjectName("setEndButton");
 
-        horizontalLayout->addWidget(shuffleButton);
+        gridLayout_2->addWidget(setEndButton, 1, 1, 1, 1);
 
-        quitButton = new QPushButton(centralwidget);
-        quitButton->setObjectName("quitButton");
+        setStartButton = new QPushButton(centralwidget);
+        setStartButton->setObjectName("setStartButton");
 
-        horizontalLayout->addWidget(quitButton);
+        gridLayout_2->addWidget(setStartButton, 0, 1, 1, 1);
+
+        clearButton = new QPushButton(centralwidget);
+        clearButton->setObjectName("clearButton");
+
+        gridLayout_2->addWidget(clearButton, 2, 0, 1, 1);
+
+        generateButton = new QPushButton(centralwidget);
+        generateButton->setObjectName("generateButton");
+
+        gridLayout_2->addWidget(generateButton, 0, 0, 1, 1);
+
+        customButton = new QPushButton(centralwidget);
+        customButton->setObjectName("customButton");
+
+        gridLayout_2->addWidget(customButton, 1, 0, 1, 1);
+
+        pauseButton = new QPushButton(centralwidget);
+        pauseButton->setObjectName("pauseButton");
+
+        gridLayout_2->addWidget(pauseButton, 1, 2, 1, 1);
+
+        guantletButton = new QPushButton(centralwidget);
+        guantletButton->setObjectName("guantletButton");
+
+        gridLayout_2->addWidget(guantletButton, 0, 2, 1, 1);
+
+        resetButton = new QPushButton(centralwidget);
+        resetButton->setObjectName("resetButton");
+
+        gridLayout_2->addWidget(resetButton, 2, 2, 1, 1);
 
 
-        verticalLayout_2->addLayout(horizontalLayout);
-
-        horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setObjectName("horizontalLayout_2");
-        flagsLabel = new QLabel(centralwidget);
-        flagsLabel->setObjectName("flagsLabel");
-
-        horizontalLayout_2->addWidget(flagsLabel);
-
-        clearedLabel = new QLabel(centralwidget);
-        clearedLabel->setObjectName("clearedLabel");
-
-        horizontalLayout_2->addWidget(clearedLabel);
-
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_2->addItem(horizontalSpacer);
-
-
-        verticalLayout_2->addLayout(horizontalLayout_2);
+        verticalLayout_2->addLayout(gridLayout_2);
 
         MainWindow->setCentralWidget(centralwidget);
 
@@ -100,10 +146,19 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Mine Sweeper", nullptr));
         actionQuit->setText(QCoreApplication::translate("MainWindow", "Quit", nullptr));
-        shuffleButton->setText(QCoreApplication::translate("MainWindow", "Shuffle", nullptr));
-        quitButton->setText(QCoreApplication::translate("MainWindow", "Quit", nullptr));
-        flagsLabel->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
-        clearedLabel->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "Algorithms:", nullptr));
+        algorithmBox->setItemText(0, QCoreApplication::translate("MainWindow", "Dijkstra's", nullptr));
+        algorithmBox->setItemText(1, QCoreApplication::translate("MainWindow", "Depth-First", nullptr));
+        algorithmBox->setItemText(2, QCoreApplication::translate("MainWindow", "Breadth-First", nullptr));
+
+        setEndButton->setText(QCoreApplication::translate("MainWindow", "Set End", nullptr));
+        setStartButton->setText(QCoreApplication::translate("MainWindow", "Set Start", nullptr));
+        clearButton->setText(QCoreApplication::translate("MainWindow", "Clear Walls", nullptr));
+        generateButton->setText(QCoreApplication::translate("MainWindow", "Generate Maze", nullptr));
+        customButton->setText(QCoreApplication::translate("MainWindow", "Custom Maze", nullptr));
+        pauseButton->setText(QCoreApplication::translate("MainWindow", "Pause Traversal", nullptr));
+        guantletButton->setText(QCoreApplication::translate("MainWindow", "Algorithm Guantlet", nullptr));
+        resetButton->setText(QCoreApplication::translate("MainWindow", "Reset Algorithm", nullptr));
     } // retranslateUi
 
 };
