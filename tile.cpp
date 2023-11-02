@@ -110,7 +110,7 @@ void Tile::clearAdjacentTilesMap() {
 
 void Tile::flip() {
     if (m_type == Type::empty) m_type = Type::wall;
-    if (m_type == Type::wall) m_type = Type::empty;
+    else if (m_type == Type::wall) m_type = Type::empty;
 }
 
 void Tile::revealAndEmitSignal() {

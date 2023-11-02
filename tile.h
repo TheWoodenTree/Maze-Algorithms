@@ -19,14 +19,12 @@ public:
     explicit Tile(QObject* parent = nullptr, Type type = empty);
 
     [[nodiscard]] const QIcon& icon() const {
-        std::cout << m_is_wall << std::endl;
         static QIcon wall(":/wall.png");
         static QIcon empty(":/empty.png");
-        //switch (m_type) {
-        //    case Type::empty: return empty; break;
-        //    case Type::wall: return wall; break;
-        //}
-        return m_is_wall ? wall : empty;
+        switch (m_type) {
+            case Type::empty: return empty; break;
+            case Type::wall: return wall; break;
+        }
     }
 
     Type getType();
