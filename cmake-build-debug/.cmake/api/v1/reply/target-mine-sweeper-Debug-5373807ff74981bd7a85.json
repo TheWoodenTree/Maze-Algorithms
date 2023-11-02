@@ -198,14 +198,14 @@
 			"includes" : 
 			[
 				{
-					"path" : "/Users/aaronhall/cs335/mine-sweeper 3/cmake-build-debug"
+					"path" : "/Users/aaronhall/Documents/Maze-Algorithms/cmake-build-debug"
 				},
 				{
-					"path" : "/Users/aaronhall/cs335/mine-sweeper 3"
+					"path" : "/Users/aaronhall/Documents/Maze-Algorithms"
 				},
 				{
 					"backtrace" : 0,
-					"path" : "/Users/aaronhall/cs335/mine-sweeper 3/cmake-build-debug/mine-sweeper_autogen/include"
+					"path" : "/Users/aaronhall/Documents/Maze-Algorithms/cmake-build-debug/mine-sweeper_autogen/include"
 				},
 				{
 					"backtrace" : 25,

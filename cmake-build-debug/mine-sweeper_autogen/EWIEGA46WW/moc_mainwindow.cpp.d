@@ -1,5 +1,5 @@
-/Users/aaronhall/cs335/mine-sweeper\ 3/cmake-build-debug/mine-sweeper_autogen/EWIEGA46WW/moc_mainwindow.cpp: /Users/aaronhall/cs335/mine-sweeper\ 3/mainwindow.h \
-  /Users/aaronhall/cs335/mine-sweeper\ 3/cmake-build-debug/mine-sweeper_autogen/moc_predefs.h \
+/Users/aaronhall/Documents/Maze-Algorithms/cmake-build-debug/mine-sweeper_autogen/EWIEGA46WW/moc_mainwindow.cpp: /Users/aaronhall/Documents/Maze-Algorithms/mainwindow.h \
+  /Users/aaronhall/Documents/Maze-Algorithms/cmake-build-debug/mine-sweeper_autogen/moc_predefs.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h \
@@ -721,6 +721,9 @@
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/xlocale.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/xlocale/_time.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include/stdarg.h \
+  /Users/aaronhall/Documents/Maze-Algorithms/tile.h \
+  /Users/aaronhall/Documents/Maze-Algorithms/tileButton.h \
+  /Users/aaronhall/Documents/Maze-Algorithms/utils.h \
   /Users/aaronhall/Qt/6.4.2/macos/lib/QtCore.framework/Versions/A/Headers/QList \
   /Users/aaronhall/Qt/6.4.2/macos/lib/QtCore.framework/Versions/A/Headers/QObject \
   /Users/aaronhall/Qt/6.4.2/macos/lib/QtCore.framework/Versions/A/Headers/QRect \
@@ -857,7 +860,4 @@
   /Users/aaronhall/Qt/6.4.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgets-config.h \
   /Users/aaronhall/Qt/6.4.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsexports.h \
   /Users/aaronhall/Qt/6.4.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsglobal.h \
-  /Users/aaronhall/Qt/6.4.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qwidget.h \
-  /Users/aaronhall/cs335/mine-sweeper\ 3/tile.h \
-  /Users/aaronhall/cs335/mine-sweeper\ 3/tileButton.h \
-  /Users/aaronhall/cs335/mine-sweeper\ 3/utils.h
+  /Users/aaronhall/Qt/6.4.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qwidget.h

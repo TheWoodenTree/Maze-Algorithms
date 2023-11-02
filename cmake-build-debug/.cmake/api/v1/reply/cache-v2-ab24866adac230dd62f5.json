@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/aaronhall/cs335/mine-sweeper 3/cmake-build-debug"
+			"value" : "/Users/aaronhall/Documents/Maze-Algorithms/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -479,7 +479,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/aaronhall/cs335/mine-sweeper 3/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/Users/aaronhall/Documents/Maze-Algorithms/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -551,7 +551,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/aaronhall/cs335/mine-sweeper 3"
+			"value" : "/Users/aaronhall/Documents/Maze-Algorithms"
 		},
 		{
 			"name" : "CMAKE_INSTALL_BINDIR",
@@ -5927,7 +5927,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/aaronhall/cs335/mine-sweeper 3/cmake-build-debug"
+			"value" : "/Users/aaronhall/Documents/Maze-Algorithms/cmake-build-debug"
 		},
 		{
 			"name" : "mine-sweeper_IS_TOP_LEVEL",
@@ -5951,7 +5951,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/aaronhall/cs335/mine-sweeper 3"
+			"value" : "/Users/aaronhall/Documents/Maze-Algorithms"
 		}
 	],
 	"kind" : "cache",

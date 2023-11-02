@@ -47,8 +47,6 @@ private slots:
 
     void revealConnectedTiles(const std::shared_ptr<Tile>& tile);
 
-    void checkIfFlagsLeft();
-
     void message(const QString& message) const;
 
 private:

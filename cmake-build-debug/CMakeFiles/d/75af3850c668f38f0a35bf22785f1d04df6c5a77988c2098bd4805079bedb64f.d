@@ -1,94 +1,24 @@
 mine-sweeper_autogen/timestamp: \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCCompiler.cmake.in \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCCompilerABI.c \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCInformation.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXCompiler.cmake.in \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXInformation.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCompilerIdDetection.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCXXCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCompileFeatures.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCompilerABI.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCompilerId.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineSystem.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeFindBinUtils.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeGenericSystem.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeParseImplicitIncludeInfo.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeParseImplicitLinkInfo.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeParseLibraryArchitecture.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystem.cmake.in \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeTestCCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeTestCXXCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeTestCompilerCommon.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckCXXCompilerFlag.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckCXXSourceCompiles.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckIncludeFile.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckLibraryExists.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/ADSP-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/ARMCC-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/ARMClang-DetermineCompiler.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-C.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-CXX.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Borland-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Bruce-C-DetermineCompiler.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompilerInternal.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Compaq-C-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Cray-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Embarcadero-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Fujitsu-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GHS-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU-C-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/HP-C-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/HP-CXX-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IAR-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Intel-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/LCC-C-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/MSVC-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/NVHPC-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/NVIDIA-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/PGI-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/PathScale-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/SCO-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/SDCC-C-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/SunPro-C-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/TI-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Watcom-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/XL-C-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/XL-CXX-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/XLClang-C-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/zOS-C-DetermineCompiler.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindOpenGL.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPackageMessage.cmake \
@@ -97,14 +27,12 @@ mine-sweeper_autogen/timestamp: \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Internal/CheckCompilerFlag.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Internal/CheckFlagCommonConfig.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Internal/FeatureTesting.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/MacroAddFileDependencies.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-C.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-CXX.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-C.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-CXX.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake \
-  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Determine-CXX.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/UnixPaths.cmake \
@@ -829,6 +757,21 @@ mine-sweeper_autogen/timestamp: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/xlocale.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/xlocale/_time.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include/stdarg.h \
+  /Users/aaronhall/Documents/Maze-Algorithms/CMakeLists.txt \
+  /Users/aaronhall/Documents/Maze-Algorithms/CMakeLocal.txt \
+  CMakeFiles/3.24.2/CMakeCCompiler.cmake \
+  CMakeFiles/3.24.2/CMakeCXXCompiler.cmake \
+  CMakeFiles/3.24.2/CMakeSystem.cmake \
+  mine-sweeper_autogen/moc_predefs.h \
+  /Users/aaronhall/Documents/Maze-Algorithms/main.cpp \
+  /Users/aaronhall/Documents/Maze-Algorithms/mainwindow.cpp \
+  /Users/aaronhall/Documents/Maze-Algorithms/mainwindow.h \
+  /Users/aaronhall/Documents/Maze-Algorithms/tile.cpp \
+  /Users/aaronhall/Documents/Maze-Algorithms/tile.h \
+  /Users/aaronhall/Documents/Maze-Algorithms/tileButton.cpp \
+  /Users/aaronhall/Documents/Maze-Algorithms/tileButton.h \
+  /Users/aaronhall/Documents/Maze-Algorithms/tiles.qrc \
+  /Users/aaronhall/Documents/Maze-Algorithms/utils.h \
   /Users/aaronhall/QT/6.4.2/macos/lib/cmake/Qt6/Qt6Config.cmake \
   /Users/aaronhall/QT/6.4.2/macos/lib/cmake/Qt6/Qt6ConfigExtras.cmake \
   /Users/aaronhall/QT/6.4.2/macos/lib/cmake/Qt6/Qt6ConfigVersion.cmake \
@@ -1098,20 +1041,5 @@ mine-sweeper_autogen/timestamp: \
   /Users/aaronhall/Qt/6.4.2/macos/lib/cmake/Qt6/FindWrapAtomic.cmake \
   /Users/aaronhall/Qt/6.4.2/macos/lib/cmake/Qt6/FindWrapOpenGL.cmake \
   /Users/aaronhall/Qt/6.4.2/macos/lib/cmake/Qt6/QtFeatureCommon.cmake \
-  /Users/aaronhall/cs335/mine-sweeper\ 3/CMakeLists.txt \
-  /Users/aaronhall/cs335/mine-sweeper\ 3/CMakeLocal.txt \
-  CMakeFiles/3.24.2/CMakeCCompiler.cmake \
-  CMakeFiles/3.24.2/CMakeCXXCompiler.cmake \
-  CMakeFiles/3.24.2/CMakeSystem.cmake \
-  mine-sweeper_autogen/moc_predefs.h \
-  /Users/aaronhall/cs335/mine-sweeper\ 3/main.cpp \
-  /Users/aaronhall/cs335/mine-sweeper\ 3/mainwindow.cpp \
-  /Users/aaronhall/cs335/mine-sweeper\ 3/mainwindow.h \
-  /Users/aaronhall/cs335/mine-sweeper\ 3/tile.cpp \
-  /Users/aaronhall/cs335/mine-sweeper\ 3/tile.h \
-  /Users/aaronhall/cs335/mine-sweeper\ 3/tileButton.cpp \
-  /Users/aaronhall/cs335/mine-sweeper\ 3/tileButton.h \
-  /Users/aaronhall/cs335/mine-sweeper\ 3/tiles.qrc \
-  /Users/aaronhall/cs335/mine-sweeper\ 3/utils.h \
-  /Users/aaronhall/cs335/mine-sweeper\ 3/mainwindow.ui \
+  /Users/aaronhall/Documents/Maze-Algorithms/mainwindow.ui \
   /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake

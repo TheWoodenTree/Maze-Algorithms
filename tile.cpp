@@ -4,38 +4,41 @@
 
 Tile::Tile(QObject* parent, Type type) : QObject(parent), m_type(type) {
     switch (type) {
-        case zero:
-            m_front = QIcon(":/0.png");
+        case wall:
+            m_empty = QIcon(":/wall.png");
+            break;
+        case empty:
+            m_empty = QIcon(":/empty.png");
             break;
         case one:
-            m_front = QIcon(":/1.png");
+            m_empty = QIcon(":/1.png");
             break;
         case two:
-            m_front = QIcon(":/2.png");
+            m_empty = QIcon(":/2.png");
             break;
         case three:
-            m_front = QIcon(":/3.png");
+            m_empty = QIcon(":/3.png");
             break;
         case four:
-            m_front = QIcon(":/4.png");
+            m_empty = QIcon(":/4.png");
             break;
         case five:
-            m_front = QIcon(":/5.png");
+            m_empty = QIcon(":/5.png");
             break;
         case six:
-            m_front = QIcon(":/6.png");
+            m_empty = QIcon(":/6.png");
             break;
         case seven:
-            m_front = QIcon(":/7.png");
+            m_empty = QIcon(":/7.png");
             break;
         case eight:
-            m_front = QIcon(":/8.png");
+            m_empty = QIcon(":/8.png");
             break;
         case mine:
-            m_front = QIcon(":/mine.png");
+            m_empty = QIcon(":/mine.png");
             break;
     }
-    assert(!m_front.isNull());
+    assert(!m_empty.isNull());
 }
 
 Tile::Type Tile::getType() {
@@ -45,41 +48,44 @@ Tile::Type Tile::getType() {
 void Tile::setType(Type type)  {
     m_type = type;
     switch (type) {
-        case zero:
-            m_front = QIcon(":/0.png");
+        case wall:
+            m_empty = QIcon(":/wall.png");
+            break;
+        case empty:
+            m_empty = QIcon(":/empty.png");
             break;
         case one:
-            m_front = QIcon(":/1.png");
+            m_empty = QIcon(":/1.png");
             break;
         case two:
-            m_front = QIcon(":/2.png");
+            m_empty = QIcon(":/2.png");
             break;
         case three:
-            m_front = QIcon(":/3.png");
+            m_empty = QIcon(":/3.png");
             break;
         case four:
-            m_front = QIcon(":/4.png");
+            m_empty = QIcon(":/4.png");
             break;
         case five:
-            m_front = QIcon(":/5.png");
+            m_empty = QIcon(":/5.png");
             break;
         case six:
-            m_front = QIcon(":/6.png");
+            m_empty = QIcon(":/6.png");
             break;
         case seven:
-            m_front = QIcon(":/7.png");
+            m_empty = QIcon(":/7.png");
             break;
         case eight:
-            m_front = QIcon(":/8.png");
+            m_empty = QIcon(":/8.png");
             break;
         case mine:
-            m_front = QIcon(":/mine.png");
+            m_empty = QIcon(":/mine.png");
             break;
     }
 }
 
-bool Tile::isRevealed() const {
-    return m_revealed;
+bool Tile::isWall() const {
+    return m_is_wall;
 }
 
 bool Tile::isFlagged() const {
@@ -102,22 +108,13 @@ void Tile::clearAdjacentTilesMap() {
     m_adjacentTilesMap.clear();
 }
 
-void Tile::updateNumAdjacentMines() {
-    int numAdjacentMines = 0;
-    for (const auto& adjacentTile : m_adjacentTilesMap) {
-        if (adjacentTile.second->getType() == mine) {
-            ++numAdjacentMines;
-        }
-    }
-    setType(Type(numAdjacentMines));
-}
-
-void Tile::reveal() {
-    m_revealed = !m_revealed;
+void Tile::flip() {
+    if (m_type == Type::empty) m_type = Type::wall;
+    if (m_type == Type::wall) m_type = Type::empty;
 }
 
 void Tile::revealAndEmitSignal() {
-    m_revealed = !m_revealed;
+    m_is_wall = !m_is_wall;
     emit stateChanged(shared_from_this());
 }
 

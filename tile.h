@@ -13,22 +13,27 @@ class Tile : public QObject, public std::enable_shared_from_this<Tile>  {
 public:
 
     enum Type {
-        zero, one, two, three, four, five, six, seven, eight, mine
+        wall, empty, one, two, three, four, five, six, seven, eight, mine
     };
 
-    explicit Tile(QObject* parent = nullptr, Type type = zero);
+    explicit Tile(QObject* parent = nullptr, Type type = empty);
 
     [[nodiscard]] const QIcon& icon() const {
-        static QIcon back(":/covered.png");
-        static QIcon flagged(":/flag.png");
-        return m_revealed ? m_front : (m_flagged ? flagged : back);
+        std::cout << m_is_wall << std::endl;
+        static QIcon wall(":/wall.png");
+        static QIcon empty(":/empty.png");
+        //switch (m_type) {
+        //    case Type::empty: return empty; break;
+        //    case Type::wall: return wall; break;
+        //}
+        return m_is_wall ? wall : empty;
     }
 
     Type getType();
 
     void setType(Type type);
 
-    bool isRevealed() const;
+    bool isWall() const;
 
     bool isFlagged() const;
 
@@ -48,7 +53,7 @@ public:
 
 public slots:
 
-    void reveal();
+    void flip();
 
     void revealAndEmitSignal();
 
@@ -56,15 +61,13 @@ public slots:
 
     void flagAndEmitSignal();
 
-    void updateNumAdjacentMines();
-
 private:
-    QIcon m_front;
+    QIcon m_empty;
     Type m_type;
     std::shared_ptr<Tile> m_north, m_east, m_south, m_west,
             m_northeast, m_northwest, m_southeast, m_southwest; // Adjacent tiles
     std::map<RelativeAdjacencyIndex, std::shared_ptr<Tile>> m_adjacentTilesMap;
-    bool m_revealed = false;
+    bool m_is_wall = false;
     bool m_flagged = false;
 };
 

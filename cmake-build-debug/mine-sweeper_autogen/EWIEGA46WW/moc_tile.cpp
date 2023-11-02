@@ -26,18 +26,17 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_Tile_t {
-    uint offsetsAndSizes[22];
+    uint offsetsAndSizes[20];
     char stringdata0[5];
     char stringdata1[13];
     char stringdata2[1];
     char stringdata3[22];
     char stringdata4[5];
     char stringdata5[17];
-    char stringdata6[7];
+    char stringdata6[5];
     char stringdata7[20];
     char stringdata8[5];
     char stringdata9[18];
-    char stringdata10[23];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_Tile_t::offsetsAndSizes) + ofs), len 
@@ -49,11 +48,10 @@ Q_CONSTINIT static const qt_meta_stringdata_Tile_t qt_meta_stringdata_Tile = {
         QT_MOC_LITERAL(19, 21),  // "std::shared_ptr<Tile>"
         QT_MOC_LITERAL(41, 4),  // "tile"
         QT_MOC_LITERAL(46, 16),  // "flagStateChanged"
-        QT_MOC_LITERAL(63, 6),  // "reveal"
-        QT_MOC_LITERAL(70, 19),  // "revealAndEmitSignal"
-        QT_MOC_LITERAL(90, 4),  // "flag"
-        QT_MOC_LITERAL(95, 17),  // "flagAndEmitSignal"
-        QT_MOC_LITERAL(113, 22)   // "updateNumAdjacentMines"
+        QT_MOC_LITERAL(63, 4),  // "flip"
+        QT_MOC_LITERAL(68, 19),  // "revealAndEmitSignal"
+        QT_MOC_LITERAL(88, 4),  // "flag"
+        QT_MOC_LITERAL(93, 17)   // "flagAndEmitSignal"
     },
     "Tile",
     "stateChanged",
@@ -61,11 +59,10 @@ Q_CONSTINIT static const qt_meta_stringdata_Tile_t qt_meta_stringdata_Tile = {
     "std::shared_ptr<Tile>",
     "tile",
     "flagStateChanged",
-    "reveal",
+    "flip",
     "revealAndEmitSignal",
     "flag",
-    "flagAndEmitSignal",
-    "updateNumAdjacentMines"
+    "flagAndEmitSignal"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
@@ -76,7 +73,7 @@ Q_CONSTINIT static const uint qt_meta_data_Tile[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-       7,   14, // methods
+       6,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -84,22 +81,20 @@ Q_CONSTINIT static const uint qt_meta_data_Tile[] = {
        2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   56,    2, 0x06,    1 /* Public */,
-       5,    1,   59,    2, 0x06,    3 /* Public */,
+       1,    1,   50,    2, 0x06,    1 /* Public */,
+       5,    1,   53,    2, 0x06,    3 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       6,    0,   62,    2, 0x0a,    5 /* Public */,
-       7,    0,   63,    2, 0x0a,    6 /* Public */,
-       8,    0,   64,    2, 0x0a,    7 /* Public */,
-       9,    0,   65,    2, 0x0a,    8 /* Public */,
-      10,    0,   66,    2, 0x0a,    9 /* Public */,
+       6,    0,   56,    2, 0x0a,    5 /* Public */,
+       7,    0,   57,    2, 0x0a,    6 /* Public */,
+       8,    0,   58,    2, 0x0a,    7 /* Public */,
+       9,    0,   59,    2, 0x0a,    8 /* Public */,
 
  // signals: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
     QMetaType::Void, 0x80000000 | 3,    4,
 
  // slots: parameters
-    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -123,15 +118,13 @@ Q_CONSTINIT const QMetaObject Tile::staticMetaObject = { {
         // method 'flagStateChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<std::shared_ptr<Tile>, std::false_type>,
-        // method 'reveal'
+        // method 'flip'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'revealAndEmitSignal'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'flag'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'flagAndEmitSignal'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'updateNumAdjacentMines'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -145,11 +138,10 @@ void Tile::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
         switch (_id) {
         case 0: _t->stateChanged((*reinterpret_cast< std::add_pointer_t<std::shared_ptr<Tile>>>(_a[1]))); break;
         case 1: _t->flagStateChanged((*reinterpret_cast< std::add_pointer_t<std::shared_ptr<Tile>>>(_a[1]))); break;
-        case 2: _t->reveal(); break;
+        case 2: _t->flip(); break;
         case 3: _t->revealAndEmitSignal(); break;
         case 4: _t->flag(); break;
         case 5: _t->flagAndEmitSignal(); break;
-        case 6: _t->updateNumAdjacentMines(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -192,13 +184,13 @@ int Tile::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 7)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 7;
+        _id -= 6;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 7)
+        if (_id < 6)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 7;
+        _id -= 6;
     }
     return _id;
 }

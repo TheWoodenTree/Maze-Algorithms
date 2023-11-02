@@ -43,7 +43,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "mine-sweeper::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-mine-sweeper-Debug-05b621b62d65c172c3ac.json",
+					"jsonFile" : "target-mine-sweeper-Debug-5373807ff74981bd7a85.json",
 					"name" : "mine-sweeper",
 					"projectIndex" : 0
 				},
@@ -67,8 +67,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/aaronhall/cs335/mine-sweeper 3/cmake-build-debug",
-		"source" : "/Users/aaronhall/cs335/mine-sweeper 3"
+		"build" : "/Users/aaronhall/Documents/Maze-Algorithms/cmake-build-debug",
+		"source" : "/Users/aaronhall/Documents/Maze-Algorithms"
 	},
 	"version" : 
 	{

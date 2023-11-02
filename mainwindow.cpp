@@ -16,10 +16,7 @@ MainWindow::MainWindow(QWidget* parent) :
     ui->clearedLabel->setText("Cleared: 0/" + QString::number(NUMBER_OF_CLEARABLE_TILES));
     const QSize TILE_SIZE(16, 16);
     for (int i = 0; i < NUMBER_OF_TILES; ++i) {
-        Tile::Type tileType = Tile::zero;
-        if (i < NUMBER_OF_MINES) {
-            tileType = Tile::mine;
-        }
+        Tile::Type tileType = Tile::empty;
         std::shared_ptr<Tile> tile = std::make_shared<Tile>(parent, tileType);
         m_tiles.push_back(tile);
         std::shared_ptr<TileButton> button = std::make_shared<TileButton>(parent, tile);
@@ -31,18 +28,11 @@ MainWindow::MainWindow(QWidget* parent) :
 
         QObject::connect(button.get(), SIGNAL(clicked()),
                          tile.get(), SLOT(revealAndEmitSignal()));
-        QObject::connect(button.get(), SIGNAL(rightClicked()),
-                         this, SLOT(checkIfFlagsLeft()));
 
         m_buttons.push_back(button);
         m_buttonMap.insert({tile, button});
 
         ui->gridLayout->addWidget(m_buttons.back().get(), i / NUMBER_OF_COLUMNS, i % NUMBER_OF_ROWS);
-
-        if (tile->getType() != Tile::mine) {
-            QObject::connect(this, SIGNAL(boardGenerated()),
-                             (tile.get()), SLOT(updateNumAdjacentMines()));
-        }
 
         QObject::connect(tile.get(), SIGNAL(stateChanged(std::shared_ptr<Tile>)),
                          this, SLOT(tileClicked(std::shared_ptr<Tile>)));
@@ -78,29 +68,21 @@ void MainWindow::quit() {
 }
 
 void MainWindow::sync() {
-    for (const auto& tile : m_tiles) {
+    for (const auto& tile : m_tiles) { // Disconnect all buttons
         QObject::disconnect(m_buttonMap.at(tile).get(), SIGNAL(clicked()),
                             tile.get(), SLOT(revealAndEmitSignal()));
-        QObject::disconnect(m_buttonMap.at(tile).get(), SIGNAL(rightClicked()),
-                            this, SLOT(checkIfFlagsLeft()));
     }
     m_buttonMap.clear();
-    for (int i = 0; i < NUMBER_OF_TILES; ++i) {
+    for (int i = 0; i < NUMBER_OF_TILES; ++i) { // Reconnect all buttons
         m_buttons[i]->setTile(m_tiles[i]);
         m_buttonMap.insert({m_tiles[i], m_buttons[i]});
         std::shared_ptr<Tile> tile = m_buttons[i]->getTile();
-        if (!tile->isRevealed() && !tile->isFlagged()) { // Disallow revealing revealed or flagged tiles
-            QObject::connect(m_buttons[i].get(), SIGNAL(clicked()),
-                             m_tiles[i].get(), SLOT(revealAndEmitSignal()));
-        }
-        if (!tile->isRevealed()) { // Disallow flagging revealed tiles
-            QObject::connect(m_buttons[i].get(), SIGNAL(rightClicked()),
-                             this, SLOT(checkIfFlagsLeft()));
-        }
+        QObject::connect(m_buttons[i].get(), SIGNAL(clicked()),
+                         m_tiles[i].get(), SLOT(revealAndEmitSignal()));
     }
     auto tileIt = m_tiles.begin();
     auto buttonIt = m_buttons.begin();
-    while (tileIt != m_tiles.end()) {
+    while (tileIt != m_tiles.end()) { // Update all icons
         (*buttonIt)->setIcon((*tileIt)->icon());
         ++tileIt;
         ++buttonIt;
@@ -109,43 +91,9 @@ void MainWindow::sync() {
 }
 
 void MainWindow::tileClicked(const std::shared_ptr<Tile>& tile) {
-    if (!m_firstTileRevealed) {
-        m_firstTileRevealed = true;
-        if (tile->getType() == Tile::mine) {
-            for (const auto& currTile : m_tiles) {
-                if (currTile->getType() == Tile::zero && currTile != tile) {
-                    currTile->setType(Tile::mine);
-                    QObject::connect(this, SIGNAL(boardGenerated()),
-                                        tile.get(), SLOT(updateNumAdjacentMines()));
-                    QObject::disconnect(this, SIGNAL(boardGenerated()),
-                                     currTile.get(), SLOT(updateNumAdjacentMines()));
-                    break;
-                }
-            }
-            tile->setType(Tile::zero);
-        }
-        setAdjacentTiles();
-        emit boardGenerated();
-    }
-    if (tile->getType() != Tile::mine) {
-        m_numClearedTiles += 1;
-        updateClearedTilesLabel(m_numClearedTiles);
-        revealConnectedTiles(tile);
-    }
-    else {
-        tile->reveal();
-        for (const auto& currTile : m_tiles) {
-            if (currTile->getType() == Tile::mine) {
-                currTile->reveal();
-            }
-        }
-        sync();
-        message(LOSE_MESSAGE);
-        return;
-    }
-
+    tile->flip();
+    setAdjacentTiles();
     sync();
-    if (m_numClearedTiles == NUMBER_OF_CLEARABLE_TILES) { message(WIN_MESSAGE); }
 }
 
 void MainWindow::tileRightClicked(const std::shared_ptr<Tile>& tile) {
@@ -210,8 +158,8 @@ void MainWindow::setAdjacentTiles() {
 
 void MainWindow::reset(QAbstractButton* button) {
     for (const auto& tile : m_tiles) {
-        if (tile->isRevealed()) {
-            tile->reveal(); // Reset to being covered up. Bad name, I know, but I'm too lazy to change it now.
+        if (tile->isWall()) {
+            tile->flip();
         }
         if (tile->isFlagged()) {
             tile->flag();
@@ -233,36 +181,26 @@ void MainWindow::shuffle() {
     sync();
 }
 
-// Recursively reveal all connected "zero" tiles until a bomb-adjacent tile is revealed
+// Recursively reveal all connected "empty" tiles until a bomb-adjacent tile is revealed
 void MainWindow::revealConnectedTiles(const std::shared_ptr<Tile>& tile) { // NOLINT(misc-no-recursion)
     Tile::Type tileType = tile->getType();
     auto adjacentTilesMap = tile->getAdjacentTilesMap();
     for (const auto& pair : adjacentTilesMap) {
         std::shared_ptr<Tile> adjacentTile = pair.second;
         Tile::Type adjTileType = adjacentTile->getType();
-        if (!adjacentTile->isRevealed() && tileType == Tile::zero && !adjacentTile->isFlagged()) {
-            if (adjTileType == Tile::zero) {
-                adjacentTile->reveal();
+        if (!adjacentTile->isWall() && tileType == Tile::empty && !adjacentTile->isFlagged()) {
+            if (adjTileType == Tile::empty) {
+                adjacentTile->flip();
                 m_numClearedTiles += 1;
                 updateClearedTilesLabel(m_numClearedTiles);
                 revealConnectedTiles(adjacentTile);
             }
             else if (adjTileType != Tile::mine) {
-                adjacentTile->reveal();
+                adjacentTile->flip();
                 m_numClearedTiles += 1;
                 updateClearedTilesLabel(m_numClearedTiles);
             }
         }
-    }
-}
-
-void MainWindow::checkIfFlagsLeft() {
-    auto button = qobject_cast<TileButton*>(sender());
-    if (m_remainingFlags > 0 || button->getTile()->isFlagged()) {
-        button->getTile()->flagAndEmitSignal();
-    }
-    else {
-        message(NO_FLAGS_MESSAGE);
     }
 }
 
