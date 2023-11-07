@@ -41,6 +41,8 @@ private slots:
 
     void clearWalls();
 
+    void breadthFirstSearch();
+
     void revealConnectedTiles(const std::shared_ptr<Tile>& tile);
 
     void message(const QString& message) const;

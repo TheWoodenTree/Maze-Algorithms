@@ -11,6 +11,8 @@ std::default_random_engine MainWindow::m_generator; // NOLINT(cert-msc51-cpp)
 MainWindow::MainWindow(QWidget* parent) :
         QMainWindow(nullptr), ui(new Ui::MainWindow) {
     ui->setupUi(this);
+    QObject::connect(ui->startButton, SIGNAL(clicked()),
+                     this, SLOT(breadthFirstSearch()));
     const QSize TILE_SIZE(16, 16);
     for (int i = 0; i < NUMBER_OF_TILES; ++i) {
         Tile::Type tileType;
@@ -137,6 +139,10 @@ void MainWindow::setAdjacentTiles() {
 }
 
 void MainWindow::clearWalls() {
+}
+
+void MainWindow::breadthFirstSearch() {
+    
 }
 
 void MainWindow::revealConnectedTiles(const std::shared_ptr<Tile>& tile) { // NOLINT(misc-no-recursion)

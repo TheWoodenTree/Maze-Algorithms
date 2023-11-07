@@ -26,7 +26,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_MainWindow_t {
-    uint offsetsAndSizes[26];
+    uint offsetsAndSizes[28];
     char stringdata0[11];
     char stringdata1[15];
     char stringdata2[1];
@@ -38,8 +38,9 @@ struct qt_meta_stringdata_MainWindow_t {
     char stringdata8[17];
     char stringdata9[17];
     char stringdata10[11];
-    char stringdata11[21];
-    char stringdata12[8];
+    char stringdata11[19];
+    char stringdata12[21];
+    char stringdata13[8];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_MainWindow_t::offsetsAndSizes) + ofs), len 
@@ -56,8 +57,9 @@ Q_CONSTINIT static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_Main
         QT_MOC_LITERAL(76, 16),  // "tileRightClicked"
         QT_MOC_LITERAL(93, 16),  // "setAdjacentTiles"
         QT_MOC_LITERAL(110, 10),  // "clearWalls"
-        QT_MOC_LITERAL(121, 20),  // "revealConnectedTiles"
-        QT_MOC_LITERAL(142, 7)   // "message"
+        QT_MOC_LITERAL(121, 18),  // "breadthFirstSearch"
+        QT_MOC_LITERAL(140, 20),  // "revealConnectedTiles"
+        QT_MOC_LITERAL(161, 7)   // "message"
     },
     "MainWindow",
     "boardGenerated",
@@ -70,6 +72,7 @@ Q_CONSTINIT static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_Main
     "tileRightClicked",
     "setAdjacentTiles",
     "clearWalls",
+    "breadthFirstSearch",
     "revealConnectedTiles",
     "message"
 };
@@ -82,7 +85,7 @@ Q_CONSTINIT static const uint qt_meta_data_MainWindow[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-       9,   14, // methods
+      10,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -90,17 +93,18 @@ Q_CONSTINIT static const uint qt_meta_data_MainWindow[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   68,    2, 0x06,    1 /* Public */,
+       1,    0,   74,    2, 0x06,    1 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       3,    0,   69,    2, 0x08,    2 /* Private */,
-       4,    0,   70,    2, 0x08,    3 /* Private */,
-       5,    1,   71,    2, 0x08,    4 /* Private */,
-       8,    1,   74,    2, 0x08,    6 /* Private */,
-       9,    0,   77,    2, 0x08,    8 /* Private */,
-      10,    0,   78,    2, 0x08,    9 /* Private */,
-      11,    1,   79,    2, 0x08,   10 /* Private */,
-      12,    1,   82,    2, 0x108,   12 /* Private | MethodIsConst  */,
+       3,    0,   75,    2, 0x08,    2 /* Private */,
+       4,    0,   76,    2, 0x08,    3 /* Private */,
+       5,    1,   77,    2, 0x08,    4 /* Private */,
+       8,    1,   80,    2, 0x08,    6 /* Private */,
+       9,    0,   83,    2, 0x08,    8 /* Private */,
+      10,    0,   84,    2, 0x08,    9 /* Private */,
+      11,    0,   85,    2, 0x08,   10 /* Private */,
+      12,    1,   86,    2, 0x08,   11 /* Private */,
+      13,    1,   89,    2, 0x108,   13 /* Private | MethodIsConst  */,
 
  // signals: parameters
     QMetaType::Void,
@@ -112,8 +116,9 @@ Q_CONSTINIT static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void, 0x80000000 | 6,    7,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void, 0x80000000 | 6,    7,
-    QMetaType::Void, QMetaType::QString,   12,
+    QMetaType::Void, QMetaType::QString,   13,
 
        0        // eod
 };
@@ -143,6 +148,8 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'clearWalls'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'breadthFirstSearch'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'revealConnectedTiles'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<const std::shared_ptr<Tile> &, std::false_type>,
@@ -166,8 +173,9 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 4: _t->tileRightClicked((*reinterpret_cast< std::add_pointer_t<std::shared_ptr<Tile>>>(_a[1]))); break;
         case 5: _t->setAdjacentTiles(); break;
         case 6: _t->clearWalls(); break;
-        case 7: _t->revealConnectedTiles((*reinterpret_cast< std::add_pointer_t<std::shared_ptr<Tile>>>(_a[1]))); break;
-        case 8: _t->message((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 7: _t->breadthFirstSearch(); break;
+        case 8: _t->revealConnectedTiles((*reinterpret_cast< std::add_pointer_t<std::shared_ptr<Tile>>>(_a[1]))); break;
+        case 9: _t->message((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -201,13 +209,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 9)
+        if (_id < 10)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 9;
+        _id -= 10;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 9)
+        if (_id < 10)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 9;
+        _id -= 10;
     }
     return _id;
 }

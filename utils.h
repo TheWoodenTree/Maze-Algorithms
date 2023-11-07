@@ -2,8 +2,8 @@
 // Created by Aaron Hall on 3/14/23.
 //
 
-#ifndef MINE_SWEEPER_UTILS_H
-#define MINE_SWEEPER_UTILS_H
+#ifndef MAZE_ALGORITHMS_UTILS_H
+#define MAZE_ALGORITHMS_UTILS_H
 
 static const int NUMBER_OF_ROWS = 32;
 static const int NUMBER_OF_COLUMNS = 32;
@@ -15,4 +15,4 @@ enum RelativeAdjacencyIndex {
     southeast = south + east, southwest = south + west
 };
 
-#endif //MINE_SWEEPER_UTILS_H
+#endif //MAZE_ALGORITHMS_H
