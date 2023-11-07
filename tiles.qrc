@@ -3,14 +3,7 @@
         <file alias="empty.png">tile-images/empty.png</file>
         <file alias="start.png">tile-images/start.png</file>
         <file alias="end.png">tile-images/end.png</file>
-        <file alias="path.png">tile-images/path.png</file>
-        <file alias="4.png">tile-images/4.png</file>
-        <file alias="5.png">tile-images/5.png</file>
-        <file alias="6.png">tile-images/6.png</file>
-        <file alias="7.png">tile-images/7.png</file>
-        <file alias="8.png">tile-images/8.png</file>
+        <file alias="traverse.png">tile-images/traverse.png</file>
         <file alias="wall.png">tile-images/wall.png</file>
-        <file alias="mine.png">tile-images/mine.png</file>
-        <file alias="flag.png">tile-images/flag.png</file>
     </qresource>
 </RCC>

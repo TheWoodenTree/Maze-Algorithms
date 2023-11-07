@@ -13,7 +13,7 @@ Q_OBJECT
 public:
 
     enum Type {
-        wall, empty, start, end, path
+        wall, empty, start, end, traverse
     };
 
     explicit Tile(QObject *parent = nullptr, Type type = empty);
@@ -23,6 +23,7 @@ public:
         static QIcon empty(":/empty.png");
         static QIcon start(":/start.png");
         static QIcon end(":/end.png");
+        static QIcon traverse(":/traverse.png");
         switch (m_type) {
             case Type::empty:
                 return empty;
@@ -35,6 +36,9 @@ public:
                 break;
             case Type::end:
                 return end;
+                break;
+            case Type::traverse:
+                return traverse;
                 break;
             default:
                 return empty;

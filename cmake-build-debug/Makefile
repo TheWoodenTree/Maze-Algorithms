@@ -116,37 +116,37 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named mine-sweeper
+# Target rules for targets named maze-algorithms
 
 # Build rule for target.
-mine-sweeper: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 mine-sweeper
-.PHONY : mine-sweeper
+maze-algorithms: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 maze-algorithms
+.PHONY : maze-algorithms
 
 # fast build rule for target.
-mine-sweeper/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mine-sweeper.dir\build.make CMakeFiles/mine-sweeper.dir/build
-.PHONY : mine-sweeper/fast
+maze-algorithms/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\maze-algorithms.dir\build.make CMakeFiles/maze-algorithms.dir/build
+.PHONY : maze-algorithms/fast
 
 #=============================================================================
-# Target rules for targets named mine-sweeper_autogen
+# Target rules for targets named maze-algorithms_autogen
 
 # Build rule for target.
-mine-sweeper_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 mine-sweeper_autogen
-.PHONY : mine-sweeper_autogen
+maze-algorithms_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 maze-algorithms_autogen
+.PHONY : maze-algorithms_autogen
 
 # fast build rule for target.
-mine-sweeper_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mine-sweeper_autogen.dir\build.make CMakeFiles/mine-sweeper_autogen.dir/build
-.PHONY : mine-sweeper_autogen/fast
+maze-algorithms_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\maze-algorithms_autogen.dir\build.make CMakeFiles/maze-algorithms_autogen.dir/build
+.PHONY : maze-algorithms_autogen/fast
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
 # target to build an object file
 main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mine-sweeper.dir\build.make CMakeFiles/mine-sweeper.dir/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\maze-algorithms.dir\build.make CMakeFiles/maze-algorithms.dir/main.cpp.obj
 .PHONY : main.cpp.obj
 
 main.i: main.cpp.i
@@ -154,7 +154,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mine-sweeper.dir\build.make CMakeFiles/mine-sweeper.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\maze-algorithms.dir\build.make CMakeFiles/maze-algorithms.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -162,7 +162,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mine-sweeper.dir\build.make CMakeFiles/mine-sweeper.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\maze-algorithms.dir\build.make CMakeFiles/maze-algorithms.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 mainwindow.obj: mainwindow.cpp.obj
@@ -170,7 +170,7 @@ mainwindow.obj: mainwindow.cpp.obj
 
 # target to build an object file
 mainwindow.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mine-sweeper.dir\build.make CMakeFiles/mine-sweeper.dir/mainwindow.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\maze-algorithms.dir\build.make CMakeFiles/maze-algorithms.dir/mainwindow.cpp.obj
 .PHONY : mainwindow.cpp.obj
 
 mainwindow.i: mainwindow.cpp.i
@@ -178,7 +178,7 @@ mainwindow.i: mainwindow.cpp.i
 
 # target to preprocess a source file
 mainwindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mine-sweeper.dir\build.make CMakeFiles/mine-sweeper.dir/mainwindow.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\maze-algorithms.dir\build.make CMakeFiles/maze-algorithms.dir/mainwindow.cpp.i
 .PHONY : mainwindow.cpp.i
 
 mainwindow.s: mainwindow.cpp.s
@@ -186,63 +186,63 @@ mainwindow.s: mainwindow.cpp.s
 
 # target to generate assembly for a file
 mainwindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mine-sweeper.dir\build.make CMakeFiles/mine-sweeper.dir/mainwindow.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\maze-algorithms.dir\build.make CMakeFiles/maze-algorithms.dir/mainwindow.cpp.s
 .PHONY : mainwindow.cpp.s
 
-mine-sweeper_autogen/EWIEGA46WW/qrc_tiles.obj: mine-sweeper_autogen/EWIEGA46WW/qrc_tiles.cpp.obj
-.PHONY : mine-sweeper_autogen/EWIEGA46WW/qrc_tiles.obj
+maze-algorithms_autogen/EWIEGA46WW/qrc_tiles.obj: maze-algorithms_autogen/EWIEGA46WW/qrc_tiles.cpp.obj
+.PHONY : maze-algorithms_autogen/EWIEGA46WW/qrc_tiles.obj
 
 # target to build an object file
-mine-sweeper_autogen/EWIEGA46WW/qrc_tiles.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mine-sweeper.dir\build.make CMakeFiles/mine-sweeper.dir/mine-sweeper_autogen/EWIEGA46WW/qrc_tiles.cpp.obj
-.PHONY : mine-sweeper_autogen/EWIEGA46WW/qrc_tiles.cpp.obj
+maze-algorithms_autogen/EWIEGA46WW/qrc_tiles.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\maze-algorithms.dir\build.make CMakeFiles/maze-algorithms.dir/maze-algorithms_autogen/EWIEGA46WW/qrc_tiles.cpp.obj
+.PHONY : maze-algorithms_autogen/EWIEGA46WW/qrc_tiles.cpp.obj
 
-mine-sweeper_autogen/EWIEGA46WW/qrc_tiles.i: mine-sweeper_autogen/EWIEGA46WW/qrc_tiles.cpp.i
-.PHONY : mine-sweeper_autogen/EWIEGA46WW/qrc_tiles.i
+maze-algorithms_autogen/EWIEGA46WW/qrc_tiles.i: maze-algorithms_autogen/EWIEGA46WW/qrc_tiles.cpp.i
+.PHONY : maze-algorithms_autogen/EWIEGA46WW/qrc_tiles.i
 
 # target to preprocess a source file
-mine-sweeper_autogen/EWIEGA46WW/qrc_tiles.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mine-sweeper.dir\build.make CMakeFiles/mine-sweeper.dir/mine-sweeper_autogen/EWIEGA46WW/qrc_tiles.cpp.i
-.PHONY : mine-sweeper_autogen/EWIEGA46WW/qrc_tiles.cpp.i
+maze-algorithms_autogen/EWIEGA46WW/qrc_tiles.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\maze-algorithms.dir\build.make CMakeFiles/maze-algorithms.dir/maze-algorithms_autogen/EWIEGA46WW/qrc_tiles.cpp.i
+.PHONY : maze-algorithms_autogen/EWIEGA46WW/qrc_tiles.cpp.i
 
-mine-sweeper_autogen/EWIEGA46WW/qrc_tiles.s: mine-sweeper_autogen/EWIEGA46WW/qrc_tiles.cpp.s
-.PHONY : mine-sweeper_autogen/EWIEGA46WW/qrc_tiles.s
+maze-algorithms_autogen/EWIEGA46WW/qrc_tiles.s: maze-algorithms_autogen/EWIEGA46WW/qrc_tiles.cpp.s
+.PHONY : maze-algorithms_autogen/EWIEGA46WW/qrc_tiles.s
 
 # target to generate assembly for a file
-mine-sweeper_autogen/EWIEGA46WW/qrc_tiles.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mine-sweeper.dir\build.make CMakeFiles/mine-sweeper.dir/mine-sweeper_autogen/EWIEGA46WW/qrc_tiles.cpp.s
-.PHONY : mine-sweeper_autogen/EWIEGA46WW/qrc_tiles.cpp.s
+maze-algorithms_autogen/EWIEGA46WW/qrc_tiles.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\maze-algorithms.dir\build.make CMakeFiles/maze-algorithms.dir/maze-algorithms_autogen/EWIEGA46WW/qrc_tiles.cpp.s
+.PHONY : maze-algorithms_autogen/EWIEGA46WW/qrc_tiles.cpp.s
 
-mine-sweeper_autogen/mocs_compilation.obj: mine-sweeper_autogen/mocs_compilation.cpp.obj
-.PHONY : mine-sweeper_autogen/mocs_compilation.obj
+maze-algorithms_autogen/mocs_compilation.obj: maze-algorithms_autogen/mocs_compilation.cpp.obj
+.PHONY : maze-algorithms_autogen/mocs_compilation.obj
 
 # target to build an object file
-mine-sweeper_autogen/mocs_compilation.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mine-sweeper.dir\build.make CMakeFiles/mine-sweeper.dir/mine-sweeper_autogen/mocs_compilation.cpp.obj
-.PHONY : mine-sweeper_autogen/mocs_compilation.cpp.obj
+maze-algorithms_autogen/mocs_compilation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\maze-algorithms.dir\build.make CMakeFiles/maze-algorithms.dir/maze-algorithms_autogen/mocs_compilation.cpp.obj
+.PHONY : maze-algorithms_autogen/mocs_compilation.cpp.obj
 
-mine-sweeper_autogen/mocs_compilation.i: mine-sweeper_autogen/mocs_compilation.cpp.i
-.PHONY : mine-sweeper_autogen/mocs_compilation.i
+maze-algorithms_autogen/mocs_compilation.i: maze-algorithms_autogen/mocs_compilation.cpp.i
+.PHONY : maze-algorithms_autogen/mocs_compilation.i
 
 # target to preprocess a source file
-mine-sweeper_autogen/mocs_compilation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mine-sweeper.dir\build.make CMakeFiles/mine-sweeper.dir/mine-sweeper_autogen/mocs_compilation.cpp.i
-.PHONY : mine-sweeper_autogen/mocs_compilation.cpp.i
+maze-algorithms_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\maze-algorithms.dir\build.make CMakeFiles/maze-algorithms.dir/maze-algorithms_autogen/mocs_compilation.cpp.i
+.PHONY : maze-algorithms_autogen/mocs_compilation.cpp.i
 
-mine-sweeper_autogen/mocs_compilation.s: mine-sweeper_autogen/mocs_compilation.cpp.s
-.PHONY : mine-sweeper_autogen/mocs_compilation.s
+maze-algorithms_autogen/mocs_compilation.s: maze-algorithms_autogen/mocs_compilation.cpp.s
+.PHONY : maze-algorithms_autogen/mocs_compilation.s
 
 # target to generate assembly for a file
-mine-sweeper_autogen/mocs_compilation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mine-sweeper.dir\build.make CMakeFiles/mine-sweeper.dir/mine-sweeper_autogen/mocs_compilation.cpp.s
-.PHONY : mine-sweeper_autogen/mocs_compilation.cpp.s
+maze-algorithms_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\maze-algorithms.dir\build.make CMakeFiles/maze-algorithms.dir/maze-algorithms_autogen/mocs_compilation.cpp.s
+.PHONY : maze-algorithms_autogen/mocs_compilation.cpp.s
 
 tile.obj: tile.cpp.obj
 .PHONY : tile.obj
 
 # target to build an object file
 tile.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mine-sweeper.dir\build.make CMakeFiles/mine-sweeper.dir/tile.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\maze-algorithms.dir\build.make CMakeFiles/maze-algorithms.dir/tile.cpp.obj
 .PHONY : tile.cpp.obj
 
 tile.i: tile.cpp.i
@@ -250,7 +250,7 @@ tile.i: tile.cpp.i
 
 # target to preprocess a source file
 tile.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mine-sweeper.dir\build.make CMakeFiles/mine-sweeper.dir/tile.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\maze-algorithms.dir\build.make CMakeFiles/maze-algorithms.dir/tile.cpp.i
 .PHONY : tile.cpp.i
 
 tile.s: tile.cpp.s
@@ -258,7 +258,7 @@ tile.s: tile.cpp.s
 
 # target to generate assembly for a file
 tile.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mine-sweeper.dir\build.make CMakeFiles/mine-sweeper.dir/tile.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\maze-algorithms.dir\build.make CMakeFiles/maze-algorithms.dir/tile.cpp.s
 .PHONY : tile.cpp.s
 
 tileButton.obj: tileButton.cpp.obj
@@ -266,7 +266,7 @@ tileButton.obj: tileButton.cpp.obj
 
 # target to build an object file
 tileButton.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mine-sweeper.dir\build.make CMakeFiles/mine-sweeper.dir/tileButton.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\maze-algorithms.dir\build.make CMakeFiles/maze-algorithms.dir/tileButton.cpp.obj
 .PHONY : tileButton.cpp.obj
 
 tileButton.i: tileButton.cpp.i
@@ -274,7 +274,7 @@ tileButton.i: tileButton.cpp.i
 
 # target to preprocess a source file
 tileButton.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mine-sweeper.dir\build.make CMakeFiles/mine-sweeper.dir/tileButton.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\maze-algorithms.dir\build.make CMakeFiles/maze-algorithms.dir/tileButton.cpp.i
 .PHONY : tileButton.cpp.i
 
 tileButton.s: tileButton.cpp.s
@@ -282,7 +282,7 @@ tileButton.s: tileButton.cpp.s
 
 # target to generate assembly for a file
 tileButton.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mine-sweeper.dir\build.make CMakeFiles/mine-sweeper.dir/tileButton.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\maze-algorithms.dir\build.make CMakeFiles/maze-algorithms.dir/tileButton.cpp.s
 .PHONY : tileButton.cpp.s
 
 # Help Target
@@ -293,20 +293,20 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... mine-sweeper_autogen
-	@echo ... mine-sweeper
+	@echo ... maze-algorithms_autogen
+	@echo ... maze-algorithms
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
 	@echo ... mainwindow.obj
 	@echo ... mainwindow.i
 	@echo ... mainwindow.s
-	@echo ... mine-sweeper_autogen/EWIEGA46WW/qrc_tiles.obj
-	@echo ... mine-sweeper_autogen/EWIEGA46WW/qrc_tiles.i
-	@echo ... mine-sweeper_autogen/EWIEGA46WW/qrc_tiles.s
-	@echo ... mine-sweeper_autogen/mocs_compilation.obj
-	@echo ... mine-sweeper_autogen/mocs_compilation.i
-	@echo ... mine-sweeper_autogen/mocs_compilation.s
+	@echo ... maze-algorithms_autogen/EWIEGA46WW/qrc_tiles.obj
+	@echo ... maze-algorithms_autogen/EWIEGA46WW/qrc_tiles.i
+	@echo ... maze-algorithms_autogen/EWIEGA46WW/qrc_tiles.s
+	@echo ... maze-algorithms_autogen/mocs_compilation.obj
+	@echo ... maze-algorithms_autogen/mocs_compilation.i
+	@echo ... maze-algorithms_autogen/mocs_compilation.s
 	@echo ... tile.obj
 	@echo ... tile.i
 	@echo ... tile.s

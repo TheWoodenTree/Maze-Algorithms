@@ -5,6 +5,8 @@
 #include "utils.h"
 #include <iostream>
 #include <QMessageBox>
+#include <QThread>
+#include <queue>
 
 std::default_random_engine MainWindow::m_generator; // NOLINT(cert-msc51-cpp)
 
@@ -24,6 +26,10 @@ MainWindow::MainWindow(QWidget* parent) :
             tileType = Tile::empty;
 
         std::shared_ptr<Tile> tile = std::make_shared<Tile>(parent, tileType);
+        if (tileType == Tile::start)
+            m_start = tile;
+        if (tileType == Tile::end)
+            m_end = tile;
         m_tiles.push_back(tile);
         std::shared_ptr<TileButton> button = std::make_shared<TileButton>(parent, tile);
 
@@ -44,7 +50,7 @@ MainWindow::MainWindow(QWidget* parent) :
                          this, SLOT(tileClicked(std::shared_ptr<Tile>)));
 
     }
-
+    setAdjacentTiles();
     sync();
 }
 
@@ -98,8 +104,8 @@ void MainWindow::setAdjacentTiles() {
 
         // Bools for making sure tiles on an edge do not have an adjacent tile set to a tile
         // which may be adjacent to it index-wise but is actually not adjacent to it on the grid
-        bool notLeftEdge = (i % 16 != 0);
-        bool notRightEdge = (i % 16 != NUMBER_OF_COLUMNS - 1);
+        bool notLeftEdge = (i % NUMBER_OF_COLUMNS != 0);
+        bool notRightEdge = (i % NUMBER_OF_COLUMNS != NUMBER_OF_COLUMNS - 1);
 
         std::shared_ptr<Tile> currTile = m_tiles[i];
 
@@ -119,22 +125,22 @@ void MainWindow::setAdjacentTiles() {
             assert(m_tiles[i + west]);
             currTile->setAdjacentTile(west, m_tiles[i + west]);
         }
-        if (notRightEdge && i + northeast >= 0) {
-            assert(m_tiles[i + northeast]);
-            currTile->setAdjacentTile(northeast, m_tiles[i + northeast]);
-        }
-        if (notLeftEdge && i + northwest >= 0) {
-            assert(m_tiles[i + northwest]);
-            currTile->setAdjacentTile(northwest, m_tiles[i + northwest]);
-        }
-        if (notRightEdge && i + southeast < NUMBER_OF_TILES) {
-            assert(m_tiles[i + southeast]);
-            currTile->setAdjacentTile(southeast, m_tiles[i + southeast]);
-        }
-        if (notLeftEdge && i + southwest < NUMBER_OF_TILES) {
-            assert(m_tiles[i + southwest]);
-            currTile->setAdjacentTile(southwest, m_tiles[i + southwest]);
-        }
+//        if (notRightEdge && i + northeast >= 0) {
+//            assert(m_tiles[i + northeast]);
+//            currTile->setAdjacentTile(northeast, m_tiles[i + northeast]);
+//        }
+//        if (notLeftEdge && i + northwest >= 0) {
+//            assert(m_tiles[i + northwest]);
+//            currTile->setAdjacentTile(northwest, m_tiles[i + northwest]);
+//        }
+//        if (notRightEdge && i + southeast < NUMBER_OF_TILES) {
+//            assert(m_tiles[i + southeast]);
+//            currTile->setAdjacentTile(southeast, m_tiles[i + southeast]);
+//        }
+//        if (notLeftEdge && i + southwest < NUMBER_OF_TILES) {
+//            assert(m_tiles[i + southwest]);
+//            currTile->setAdjacentTile(southwest, m_tiles[i + southwest]);
+//        }
     }
 }
 
@@ -142,8 +148,53 @@ void MainWindow::clearWalls() {
 }
 
 void MainWindow::breadthFirstSearch() {
-    
+//    std::vector<std::shared_ptr<Tile>> visited;
+//    std::queue<std::shared_ptr<Tile>> q;
+//    q.push(m_start->getAdjacentTile(south));
+//    std::cout<< m_start->getAdjacentTilesMap().size();
+//    while (!q.empty()){
+//        std::shared_ptr<Tile> tile = q.back();
+//        std::cout<< tile;
+//        q.pop();
+//        auto adjacentTilesMap = tile->getAdjacentTilesMap();
+//        for (const auto& pair : adjacentTilesMap) {
+//            std::shared_ptr<Tile> adjacentTile = pair.second;
+//            bool tileVisited = false;
+//            for (const auto& visitedTile : visited){
+//                if (adjacentTile == visitedTile){
+//                    tileVisited = true;
+//                    break;
+//                }
+//            }
+//            if (!tileVisited){
+//                visited.push_back(adjacentTile);
+//                q.push(adjacentTile);
+//                adjacentTile->setType(Tile::traverse);
+//                QThread::sleep(1);
+//                sync();
+//                QWidget::repaint();
+//            }
+//        }
+//    }
+depthFirstSearch(m_start);
 }
+
+
+void MainWindow::depthFirstSearch(const std::shared_ptr<Tile>& tile) {
+    std::cout<<"test";
+    auto adjacentTilesMap = tile->getAdjacentTilesMap();
+    for (const auto& pair : adjacentTilesMap) {
+        std::shared_ptr<Tile> adjacentTile = pair.second;
+        if (adjacentTile && adjacentTile->getType() == Tile::empty){
+            adjacentTile->setType(Tile::traverse);
+            QThread::msleep(100);
+            sync();
+            QWidget::repaint();
+            depthFirstSearch(adjacentTile);
+        }
+    }
+}
+
 
 void MainWindow::revealConnectedTiles(const std::shared_ptr<Tile>& tile) { // NOLINT(misc-no-recursion)
 //    Tile::Type tileType = tile->getType();
