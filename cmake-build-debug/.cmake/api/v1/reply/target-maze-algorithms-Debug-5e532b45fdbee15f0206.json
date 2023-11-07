@@ -2,10 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "mine-sweeper.exe"
-		},
-		{
-			"path" : "mine-sweeper.pdb"
+			"path" : "maze-algorithms"
 		}
 	],
 	"backtrace" : 1,
@@ -22,15 +19,15 @@
 		"files" : 
 		[
 			"CMakeLists.txt",
-			"C:/Qt/6.4.2/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake",
-			"C:/Qt/6.4.2/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake",
-			"C:/Qt/6.4.2/mingw_64/lib/cmake/Qt6/Qt6Config.cmake",
-			"C:/Qt/6.4.2/mingw_64/lib/cmake/Qt6Gui/Qt6GuiVersionlessTargets.cmake",
-			"C:/Qt/6.4.2/mingw_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake",
-			"C:/Qt/6.4.2/mingw_64/lib/cmake/Qt6Core/Qt6CoreVersionlessTargets.cmake",
-			"C:/Qt/6.4.2/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake",
-			"C:/Qt/6.4.2/mingw_64/lib/cmake/Qt6Core/Qt6CoreTargets.cmake",
-			"C:/Qt/6.4.2/mingw_64/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake"
+			"/Users/aaronhall/QT/6.4.2/macos/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake",
+			"/Users/aaronhall/QT/6.4.2/macos/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake",
+			"/Users/aaronhall/QT/6.4.2/macos/lib/cmake/Qt6/Qt6Config.cmake",
+			"/Users/aaronhall/QT/6.4.2/macos/lib/cmake/Qt6Gui/Qt6GuiVersionlessTargets.cmake",
+			"/Users/aaronhall/QT/6.4.2/macos/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake",
+			"/Users/aaronhall/QT/6.4.2/macos/lib/cmake/Qt6Core/Qt6CoreVersionlessTargets.cmake",
+			"/Users/aaronhall/QT/6.4.2/macos/lib/cmake/Qt6Core/Qt6CoreConfig.cmake",
+			"/Users/aaronhall/QT/6.4.2/macos/lib/cmake/Qt6Core/Qt6CoreTargets.cmake",
+			"/Users/aaronhall/QT/6.4.2/macos/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake"
 		],
 		"nodes" : 
 		[
@@ -144,7 +141,7 @@
 			{
 				"command" : 1,
 				"file" : 8,
-				"line" : 61,
+				"line" : 62,
 				"parent" : 20
 			},
 			{
@@ -160,7 +157,7 @@
 			{
 				"command" : 1,
 				"file" : 9,
-				"line" : 61,
+				"line" : 62,
 				"parent" : 23
 			},
 			{
@@ -177,7 +174,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -fdiagnostics-color=always"
+					"fragment" : "-g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fcolor-diagnostics"
 				},
 				{
 					"fragment" : "-std=c++17"
@@ -185,10 +182,6 @@
 			],
 			"defines" : 
 			[
-				{
-					"backtrace" : 25,
-					"define" : "MINGW_HAS_SECURE_API=1"
-				},
 				{
 					"backtrace" : 25,
 					"define" : "QT_CORE_LIB"
@@ -200,68 +193,59 @@
 				{
 					"backtrace" : 25,
 					"define" : "QT_WIDGETS_LIB"
-				},
-				{
-					"backtrace" : 25,
-					"define" : "UNICODE"
-				},
-				{
-					"backtrace" : 25,
-					"define" : "WIN32"
-				},
-				{
-					"backtrace" : 25,
-					"define" : "WIN64"
-				},
-				{
-					"backtrace" : 25,
-					"define" : "_ENABLE_EXTENDED_ALIGNED_STORAGE"
-				},
-				{
-					"backtrace" : 25,
-					"define" : "_UNICODE"
-				},
-				{
-					"backtrace" : 25,
-					"define" : "_WIN64"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"path" : "C:/Users/matth/OneDrive/Documents/GitHub/Maze-Algorithms/cmake-build-debug"
+					"path" : "/Users/aaronhall/Documents/Maze-Algorithms/cmake-build-debug"
 				},
 				{
-					"path" : "C:/Users/matth/OneDrive/Documents/GitHub/Maze-Algorithms"
+					"path" : "/Users/aaronhall/Documents/Maze-Algorithms"
 				},
 				{
 					"backtrace" : 0,
-					"path" : "C:/Users/matth/OneDrive/Documents/GitHub/Maze-Algorithms/cmake-build-debug/mine-sweeper_autogen/include"
+					"path" : "/Users/aaronhall/Documents/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/include"
 				},
 				{
 					"backtrace" : 25,
 					"isSystem" : true,
-					"path" : "C:/Qt/6.4.2/mingw_64/include/QtCore"
+					"path" : "/Users/aaronhall/QT/6.4.2/macos/lib/QtCore.framework/Headers"
 				},
 				{
 					"backtrace" : 25,
 					"isSystem" : true,
-					"path" : "C:/Qt/6.4.2/mingw_64/include"
+					"path" : "/Users/aaronhall/QT/6.4.2/macos/lib/QtCore.framework"
 				},
 				{
 					"backtrace" : 25,
 					"isSystem" : true,
-					"path" : "C:/Qt/6.4.2/mingw_64/mkspecs/win32-g++"
+					"path" : "/Users/aaronhall/QT/6.4.2/macos/mkspecs/macx-clang"
 				},
 				{
 					"backtrace" : 25,
 					"isSystem" : true,
-					"path" : "C:/Qt/6.4.2/mingw_64/include/QtGui"
+					"path" : "/Users/aaronhall/QT/6.4.2/macos/include"
 				},
 				{
 					"backtrace" : 25,
 					"isSystem" : true,
-					"path" : "C:/Qt/6.4.2/mingw_64/include/QtWidgets"
+					"path" : "/Users/aaronhall/QT/6.4.2/macos/lib/QtGui.framework/Headers"
+				},
+				{
+					"backtrace" : 25,
+					"isSystem" : true,
+					"path" : "/Users/aaronhall/QT/6.4.2/macos/lib/QtGui.framework"
+				},
+				{
+					"backtrace" : 25,
+					"isSystem" : true,
+					"path" : "/Users/aaronhall/QT/6.4.2/macos/lib/QtWidgets.framework/Headers"
+				},
+				{
+					"backtrace" : 25,
+					"isSystem" : true,
+					"path" : "/Users/aaronhall/QT/6.4.2/macos/lib/QtWidgets.framework"
 				}
 			],
 			"language" : "CXX",
@@ -288,14 +272,14 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 0,
-			"id" : "mine-sweeper_autogen::@6890427a1f51a3e7e1df"
+			"id" : "maze-algorithms_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "mine-sweeper_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 0,
+			"id" : "maze-algorithms_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
-	"id" : "mine-sweeper::@6890427a1f51a3e7e1df",
+	"id" : "maze-algorithms::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -309,54 +293,66 @@
 				"role" : "flags"
 			},
 			{
+				"fragment" : "-F/Users/aaronhall/QT/6.4.2/macos/lib",
+				"role" : "frameworkPath"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/Users/aaronhall/QT/6.4.2/macos/lib",
+				"role" : "libraries"
+			},
+			{
 				"backtrace" : 8,
-				"fragment" : "C:\\Qt\\6.4.2\\mingw_64\\lib\\libQt6Widgets.a",
+				"fragment" : "/Users/aaronhall/QT/6.4.2/macos/lib/QtWidgets.framework/Versions/A/QtWidgets",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 13,
-				"fragment" : "C:\\Qt\\6.4.2\\mingw_64\\lib\\libQt6Gui.a",
+				"fragment" : "/Users/aaronhall/QT/6.4.2/macos/lib/QtGui.framework/Versions/A/QtGui",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 18,
-				"fragment" : "C:\\Qt\\6.4.2\\mingw_64\\lib\\libQt6Core.a",
+				"fragment" : "/Users/aaronhall/QT/6.4.2/macos/lib/QtCore.framework/Versions/A/QtCore",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 21,
-				"fragment" : "-lmpr",
+				"fragment" : "-framework IOKit",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 21,
-				"fragment" : "-luserenv",
+				"fragment" : "-framework DiskArbitration",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-Xlinker -framework -Xlinker OpenGL",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-Xlinker -framework -Xlinker AGL",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 24,
-				"fragment" : "-ld3d11",
+				"fragment" : "-framework AppKit",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 24,
-				"fragment" : "-ldxgi",
+				"fragment" : "-framework ImageIO",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 24,
-				"fragment" : "-ldxguid",
-				"role" : "libraries"
-			},
-			{
-				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"fragment" : "-framework Metal",
 				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
-	"name" : "mine-sweeper",
-	"nameOnDisk" : "mine-sweeper.exe",
+	"name" : "maze-algorithms",
+	"nameOnDisk" : "maze-algorithms",
 	"paths" : 
 	{
 		"build" : ".",
@@ -411,7 +407,7 @@
 			"backtrace" : 0,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/mine-sweeper_autogen/mocs_compilation.cpp",
+			"path" : "cmake-build-debug/maze-algorithms_autogen/mocs_compilation.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -471,32 +467,32 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/mine-sweeper_autogen/include/ui_mainwindow.h",
+			"path" : "cmake-build-debug/maze-algorithms_autogen/include/ui_mainwindow.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/mine-sweeper_autogen/timestamp",
+			"path" : "cmake-build-debug/maze-algorithms_autogen/timestamp",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 0,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/mine-sweeper_autogen/EWIEGA46WW/qrc_tiles.cpp",
+			"path" : "cmake-build-debug/maze-algorithms_autogen/EWIEGA46WW/qrc_tiles.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/mine-sweeper_autogen/timestamp.rule",
+			"path" : "cmake-build-debug/maze-algorithms_autogen/timestamp.rule",
 			"sourceGroupIndex" : 3
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/mine-sweeper_autogen/EWIEGA46WW/qrc_tiles.cpp.rule",
+			"path" : "cmake-build-debug/maze-algorithms_autogen/EWIEGA46WW/qrc_tiles.cpp.rule",
 			"sourceGroupIndex" : 3
 		}
 	],

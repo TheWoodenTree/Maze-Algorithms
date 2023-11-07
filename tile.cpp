@@ -52,10 +52,6 @@ bool Tile::isWall() const {
     return m_is_wall;
 }
 
-bool Tile::isFlagged() const {
-    return m_flagged;
-}
-
 std::map<RelativeAdjacencyIndex, std::shared_ptr<Tile>> Tile::getAdjacentTilesMap() {
     return m_adjacentTilesMap;
 }
@@ -77,16 +73,7 @@ void Tile::flip() {
     else if (m_type == Type::wall) m_type = Type::empty;
 }
 
-void Tile::revealAndEmitSignal() {
+void Tile::flipAndEmitSignal() {
     m_is_wall = !m_is_wall;
     emit stateChanged(shared_from_this());
-}
-
-void Tile::flag() {
-    m_flagged = !m_flagged;
-}
-
-void Tile::flagAndEmitSignal() {
-    m_flagged = !m_flagged;
-    emit flagStateChanged(shared_from_this());
 }

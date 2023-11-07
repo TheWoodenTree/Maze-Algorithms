@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Mine Sweeper</string>
+   <string>Maze Algorithms</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -78,24 +78,24 @@
     </item>
     <item>
      <layout class="QGridLayout" name="gridLayout_2">
-      <item row="1" column="1">
+      <item row="2" column="1">
        <widget class="QPushButton" name="setEndButton">
         <property name="text">
          <string>Set End</string>
         </property>
        </widget>
       </item>
-      <item row="0" column="1">
-       <widget class="QPushButton" name="setStartButton">
+      <item row="3" column="0">
+       <widget class="QPushButton" name="clearButton">
         <property name="text">
-         <string>Set Start</string>
+         <string>Clear Walls</string>
         </property>
        </widget>
       </item>
       <item row="2" column="0">
-       <widget class="QPushButton" name="clearButton">
+       <widget class="QPushButton" name="customButton">
         <property name="text">
-         <string>Clear Walls</string>
+         <string>Custom Maze</string>
         </property>
        </widget>
       </item>
@@ -106,14 +106,7 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="0">
-       <widget class="QPushButton" name="customButton">
-        <property name="text">
-         <string>Custom Maze</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="2">
+      <item row="2" column="2">
        <widget class="QPushButton" name="pauseButton">
         <property name="text">
          <string>Pause Traversal</string>
@@ -121,13 +114,27 @@
        </widget>
       </item>
       <item row="0" column="2">
+       <widget class="QPushButton" name="startButton">
+        <property name="text">
+         <string>Start Traversal</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="setStartButton">
+        <property name="text">
+         <string>Set Start</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="2">
        <widget class="QPushButton" name="guantletButton">
         <property name="text">
          <string>Algorithm Guantlet</string>
         </property>
        </widget>
       </item>
-      <item row="2" column="2">
+      <item row="3" column="2">
        <widget class="QPushButton" name="resetButton">
         <property name="text">
          <string>Reset Algorithm</string>

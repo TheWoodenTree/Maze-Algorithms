@@ -37,11 +37,12 @@ public:
     QGridLayout *gridLayout;
     QGridLayout *gridLayout_2;
     QPushButton *setEndButton;
-    QPushButton *setStartButton;
     QPushButton *clearButton;
-    QPushButton *generateButton;
     QPushButton *customButton;
+    QPushButton *generateButton;
     QPushButton *pauseButton;
+    QPushButton *startButton;
+    QPushButton *setStartButton;
     QPushButton *guantletButton;
     QPushButton *resetButton;
 
@@ -95,42 +96,47 @@ public:
         setEndButton = new QPushButton(centralwidget);
         setEndButton->setObjectName("setEndButton");
 
-        gridLayout_2->addWidget(setEndButton, 1, 1, 1, 1);
-
-        setStartButton = new QPushButton(centralwidget);
-        setStartButton->setObjectName("setStartButton");
-
-        gridLayout_2->addWidget(setStartButton, 0, 1, 1, 1);
+        gridLayout_2->addWidget(setEndButton, 2, 1, 1, 1);
 
         clearButton = new QPushButton(centralwidget);
         clearButton->setObjectName("clearButton");
 
-        gridLayout_2->addWidget(clearButton, 2, 0, 1, 1);
+        gridLayout_2->addWidget(clearButton, 3, 0, 1, 1);
+
+        customButton = new QPushButton(centralwidget);
+        customButton->setObjectName("customButton");
+
+        gridLayout_2->addWidget(customButton, 2, 0, 1, 1);
 
         generateButton = new QPushButton(centralwidget);
         generateButton->setObjectName("generateButton");
 
         gridLayout_2->addWidget(generateButton, 0, 0, 1, 1);
 
-        customButton = new QPushButton(centralwidget);
-        customButton->setObjectName("customButton");
-
-        gridLayout_2->addWidget(customButton, 1, 0, 1, 1);
-
         pauseButton = new QPushButton(centralwidget);
         pauseButton->setObjectName("pauseButton");
 
-        gridLayout_2->addWidget(pauseButton, 1, 2, 1, 1);
+        gridLayout_2->addWidget(pauseButton, 2, 2, 1, 1);
+
+        startButton = new QPushButton(centralwidget);
+        startButton->setObjectName("startButton");
+
+        gridLayout_2->addWidget(startButton, 0, 2, 1, 1);
+
+        setStartButton = new QPushButton(centralwidget);
+        setStartButton->setObjectName("setStartButton");
+
+        gridLayout_2->addWidget(setStartButton, 0, 1, 1, 1);
 
         guantletButton = new QPushButton(centralwidget);
         guantletButton->setObjectName("guantletButton");
 
-        gridLayout_2->addWidget(guantletButton, 0, 2, 1, 1);
+        gridLayout_2->addWidget(guantletButton, 6, 2, 1, 1);
 
         resetButton = new QPushButton(centralwidget);
         resetButton->setObjectName("resetButton");
 
-        gridLayout_2->addWidget(resetButton, 2, 2, 1, 1);
+        gridLayout_2->addWidget(resetButton, 3, 2, 1, 1);
 
 
         verticalLayout_2->addLayout(gridLayout_2);
@@ -152,11 +158,12 @@ public:
         algorithmBox->setItemText(2, QCoreApplication::translate("MainWindow", "Breadth-First", nullptr));
 
         setEndButton->setText(QCoreApplication::translate("MainWindow", "Set End", nullptr));
-        setStartButton->setText(QCoreApplication::translate("MainWindow", "Set Start", nullptr));
         clearButton->setText(QCoreApplication::translate("MainWindow", "Clear Walls", nullptr));
-        generateButton->setText(QCoreApplication::translate("MainWindow", "Generate Maze", nullptr));
         customButton->setText(QCoreApplication::translate("MainWindow", "Custom Maze", nullptr));
+        generateButton->setText(QCoreApplication::translate("MainWindow", "Generate Maze", nullptr));
         pauseButton->setText(QCoreApplication::translate("MainWindow", "Pause Traversal", nullptr));
+        startButton->setText(QCoreApplication::translate("MainWindow", "Start Traversal", nullptr));
+        setStartButton->setText(QCoreApplication::translate("MainWindow", "Set Start", nullptr));
         guantletButton->setText(QCoreApplication::translate("MainWindow", "Algorithm Guantlet", nullptr));
         resetButton->setText(QCoreApplication::translate("MainWindow", "Reset Algorithm", nullptr));
     } // retranslateUi

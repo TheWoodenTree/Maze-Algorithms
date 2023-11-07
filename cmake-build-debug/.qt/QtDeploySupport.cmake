@@ -22,10 +22,10 @@ if(QT_DEPLOY_PREFIX STREQUAL "")
 endif()
 
 # These are internal implementation details. They may be removed at any time.
-set(__QT_DEPLOY_SYSTEM_NAME "Windows")
+set(__QT_DEPLOY_SYSTEM_NAME "Darwin")
 set(__QT_DEPLOY_IS_SHARED_LIBS_BUILD "ON")
-set(__QT_DEPLOY_TOOL "C:/Qt/6.4.2/mingw_64/bin/windeployqt.exe")
-set(__QT_DEPLOY_IMPL_DIR "C:/Users/matth/OneDrive/Documents/GitHub/Maze-Algorithms/cmake-build-debug/.qt")
+set(__QT_DEPLOY_TOOL "/Users/aaronhall/QT/6.4.2/macos/bin/macdeployqt")
+set(__QT_DEPLOY_IMPL_DIR "/Users/aaronhall/Documents/Maze-Algorithms/cmake-build-debug/.qt")
 set(__QT_DEPLOY_VERBOSE "")
 set(__QT_CMAKE_EXPORT_NAMESPACE "Qt6")
 set(__QT_DEPLOY_GENERATOR_IS_MULTI_CONFIG "0")
@@ -35,7 +35,7 @@ set(__QT_DEFAULT_MAJOR_VERSION "6")
 
 # Define the CMake commands to be made available during deployment.
 set(__qt_deploy_support_files
-    "C:/Qt/6.4.2/mingw_64/lib/cmake/Qt6Core/Qt6CoreDeploySupport.cmake"
+    "/Users/aaronhall/Qt/6.4.2/macos/lib/cmake/Qt6Core/Qt6CoreDeploySupport.cmake"
 )
 foreach(__qt_deploy_support_file IN LISTS __qt_deploy_support_files)
     include("${__qt_deploy_support_file}")

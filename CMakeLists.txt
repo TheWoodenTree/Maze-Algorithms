@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(mine-sweeper)
+project(maze-algorithms)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -18,9 +18,9 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-add_executable(mine-sweeper main.cpp mainwindow.cpp mainwindow.h mainwindow.ui
+add_executable(maze-algorithms main.cpp mainwindow.cpp mainwindow.h mainwindow.ui
         tiles.qrc tile.cpp tile.h tileButton.cpp tileButton.h utils.h)
-target_link_libraries(mine-sweeper PRIVATE
+target_link_libraries(maze-algorithms PRIVATE
         Qt::Core
         Qt::Gui
         Qt::Widgets

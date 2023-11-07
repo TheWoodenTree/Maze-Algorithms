@@ -8,13 +8,6 @@
 static const int NUMBER_OF_ROWS = 32;
 static const int NUMBER_OF_COLUMNS = 32;
 static const int NUMBER_OF_TILES = NUMBER_OF_ROWS * NUMBER_OF_COLUMNS;
-static const int NUMBER_OF_MINES = 360;
-static const int NUMBER_OF_FLAGS = NUMBER_OF_MINES;
-static const int NUMBER_OF_CLEARABLE_TILES = NUMBER_OF_TILES - NUMBER_OF_MINES;
-
-static const QString WIN_MESSAGE = "You've won!";
-static const QString LOSE_MESSAGE = "You've lost.";
-static const QString NO_FLAGS_MESSAGE = "You have no flags left!";
 
 enum RelativeAdjacencyIndex {
     north = -NUMBER_OF_COLUMNS, east = 1, south = NUMBER_OF_COLUMNS, west = -1,

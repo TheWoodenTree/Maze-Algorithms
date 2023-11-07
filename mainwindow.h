@@ -39,9 +39,7 @@ private slots:
 
     void setAdjacentTiles();
 
-    void reset(QAbstractButton* button);
-
-    void shuffle();
+    void clearWalls();
 
     void revealConnectedTiles(const std::shared_ptr<Tile>& tile);
 
@@ -52,9 +50,6 @@ private:
     std::vector<std::shared_ptr<TileButton>> m_buttons;
     std::vector<std::shared_ptr<Tile>> m_tiles;
     std::map<std::shared_ptr<Tile>, std::shared_ptr<TileButton>> m_buttonMap;
-    int m_remainingFlags;
-    int m_numClearedTiles = 0;
-    bool m_firstTileRevealed = false;
     static std::default_random_engine m_generator;
 };
 
