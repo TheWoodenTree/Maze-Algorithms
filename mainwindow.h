@@ -43,11 +43,15 @@ private slots:
 
     void breadthFirstSearch();
 
-    void depthFirstSearch(const std::shared_ptr<Tile>& tile);
+    void callDepthFirstSearch();
+
+    bool depthFirstSearch(const std::shared_ptr<Tile>& tile);
 
     void revealConnectedTiles(const std::shared_ptr<Tile>& tile);
 
     void message(const QString& message) const;
+
+    void setupTiles(QWidget* parent);
 
 private:
     Ui::MainWindow* ui;

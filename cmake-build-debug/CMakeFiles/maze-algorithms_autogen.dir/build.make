@@ -52,10 +52,10 @@ RM = "C:\Program Files\JetBrains\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\jason\Documents\GitHub\Maze-Algorithms
+CMAKE_SOURCE_DIR = "D:\CS 498 Github\Maze-Algorithms"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\jason\Documents\GitHub\Maze-Algorithms\cmake-build-debug
+CMAKE_BINARY_DIR = "D:\CS 498 Github\Maze-Algorithms\cmake-build-debug"
 
 # Utility rule file for maze-algorithms_autogen.
 
@@ -66,8 +66,8 @@ include CMakeFiles/maze-algorithms_autogen.dir/compiler_depend.make
 include CMakeFiles/maze-algorithms_autogen.dir/progress.make
 
 CMakeFiles/maze-algorithms_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\jason\Documents\GitHub\Maze-Algorithms\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target maze-algorithms"
-	"C:\Program Files\JetBrains\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe" -E cmake_autogen C:/Users/jason/Documents/GitHub/Maze-Algorithms/cmake-build-debug/CMakeFiles/maze-algorithms_autogen.dir/AutogenInfo.json Debug
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir="D:\CS 498 Github\Maze-Algorithms\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target maze-algorithms"
+	"C:\Program Files\JetBrains\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe" -E cmake_autogen "D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/CMakeFiles/maze-algorithms_autogen.dir/AutogenInfo.json" Debug
 
 maze-algorithms_autogen: CMakeFiles/maze-algorithms_autogen
 maze-algorithms_autogen: CMakeFiles/maze-algorithms_autogen.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/maze-algorithms_autogen.dir/clean:
 .PHONY : CMakeFiles/maze-algorithms_autogen.dir/clean
 
 CMakeFiles/maze-algorithms_autogen.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\jason\Documents\GitHub\Maze-Algorithms C:\Users\jason\Documents\GitHub\Maze-Algorithms C:\Users\jason\Documents\GitHub\Maze-Algorithms\cmake-build-debug C:\Users\jason\Documents\GitHub\Maze-Algorithms\cmake-build-debug C:\Users\jason\Documents\GitHub\Maze-Algorithms\cmake-build-debug\CMakeFiles\maze-algorithms_autogen.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "D:\CS 498 Github\Maze-Algorithms" "D:\CS 498 Github\Maze-Algorithms" "D:\CS 498 Github\Maze-Algorithms\cmake-build-debug" "D:\CS 498 Github\Maze-Algorithms\cmake-build-debug" "D:\CS 498 Github\Maze-Algorithms\cmake-build-debug\CMakeFiles\maze-algorithms_autogen.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/maze-algorithms_autogen.dir/depend
 

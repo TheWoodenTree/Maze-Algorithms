@@ -1,26 +1,26 @@
 {
-	"BUILD_DIR" : "C:/Users/jason/Documents/GitHub/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen",
-	"CMAKE_BINARY_DIR" : "C:/Users/jason/Documents/GitHub/Maze-Algorithms/cmake-build-debug",
-	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/jason/Documents/GitHub/Maze-Algorithms/cmake-build-debug",
-	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/jason/Documents/GitHub/Maze-Algorithms",
-	"CMAKE_SOURCE_DIR" : "C:/Users/jason/Documents/GitHub/Maze-Algorithms",
-	"INCLUDE_DIR" : "C:/Users/jason/Documents/GitHub/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/include",
+	"BUILD_DIR" : "D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen",
+	"CMAKE_BINARY_DIR" : "D:/CS 498 Github/Maze-Algorithms/cmake-build-debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "D:/CS 498 Github/Maze-Algorithms/cmake-build-debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "D:/CS 498 Github/Maze-Algorithms",
+	"CMAKE_SOURCE_DIR" : "D:/CS 498 Github/Maze-Algorithms",
+	"INCLUDE_DIR" : "D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/include",
 	"INPUTS" : 
 	[
-		"C:/Users/jason/Documents/GitHub/Maze-Algorithms/tile-images/start.png",
-		"C:/Users/jason/Documents/GitHub/Maze-Algorithms/tile-images/traverse.png",
-		"C:/Users/jason/Documents/GitHub/Maze-Algorithms/tile-images/end.png",
-		"C:/Users/jason/Documents/GitHub/Maze-Algorithms/tile-images/empty.png",
-		"C:/Users/jason/Documents/GitHub/Maze-Algorithms/tile-images/wall.png"
+		"D:/CS 498 Github/Maze-Algorithms/tile-images/start.png",
+		"D:/CS 498 Github/Maze-Algorithms/tile-images/traverse.png",
+		"D:/CS 498 Github/Maze-Algorithms/tile-images/end.png",
+		"D:/CS 498 Github/Maze-Algorithms/tile-images/empty.png",
+		"D:/CS 498 Github/Maze-Algorithms/tile-images/wall.png"
 	],
-	"LOCK_FILE" : "C:/Users/jason/Documents/GitHub/Maze-Algorithms/cmake-build-debug/CMakeFiles/maze-algorithms_autogen.dir/AutoRcc_tiles_EWIEGA46WW_Lock.lock",
+	"LOCK_FILE" : "D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/CMakeFiles/maze-algorithms_autogen.dir/AutoRcc_tiles_EWIEGA46WW_Lock.lock",
 	"MULTI_CONFIG" : false,
 	"OPTIONS" : [ "-name", "tiles" ],
 	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
 	"OUTPUT_NAME" : "qrc_tiles.cpp",
-	"RCC_EXECUTABLE" : "C:/Qt/6.4.2/mingw_64/./bin/rcc.exe",
+	"RCC_EXECUTABLE" : "D:/Qt/6.6.0/mingw_64/./bin/rcc.exe",
 	"RCC_LIST_OPTIONS" : [ "--list" ],
-	"SETTINGS_FILE" : "C:/Users/jason/Documents/GitHub/Maze-Algorithms/cmake-build-debug/CMakeFiles/maze-algorithms_autogen.dir/AutoRcc_tiles_EWIEGA46WW_Used.txt",
-	"SOURCE" : "C:/Users/jason/Documents/GitHub/Maze-Algorithms/tiles.qrc",
+	"SETTINGS_FILE" : "D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/CMakeFiles/maze-algorithms_autogen.dir/AutoRcc_tiles_EWIEGA46WW_Used.txt",
+	"SOURCE" : "D:/CS 498 Github/Maze-Algorithms/tiles.qrc",
 	"VERBOSITY" : 0
 }

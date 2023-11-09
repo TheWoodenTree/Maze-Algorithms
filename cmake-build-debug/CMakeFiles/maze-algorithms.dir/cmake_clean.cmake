@@ -1,7 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/maze-algorithms_autogen.dir/AutogenUsed.txt"
-  "CMakeFiles/maze-algorithms_autogen.dir/ParseCache.txt"
-  "maze-algorithms_autogen"
   "CMakeFiles/maze-algorithms.dir/main.cpp.obj"
   "CMakeFiles/maze-algorithms.dir/main.cpp.obj.d"
   "CMakeFiles/maze-algorithms.dir/mainwindow.cpp.obj"
@@ -14,6 +11,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/maze-algorithms.dir/tile.cpp.obj.d"
   "CMakeFiles/maze-algorithms.dir/tileButton.cpp.obj"
   "CMakeFiles/maze-algorithms.dir/tileButton.cpp.obj.d"
+  "CMakeFiles/maze-algorithms_autogen.dir/AutogenUsed.txt"
+  "CMakeFiles/maze-algorithms_autogen.dir/ParseCache.txt"
+  "maze-algorithms_autogen"
   "libmaze-algorithms.dll.a"
   "maze-algorithms.exe"
   "maze-algorithms.exe.manifest"

@@ -5,14 +5,48 @@
 #ifndef MAZE_ALGORITHMS_UTILS_H
 #define MAZE_ALGORITHMS_UTILS_H
 
-static const int NUMBER_OF_ROWS = 32;
-static const int NUMBER_OF_COLUMNS = 32;
-static const int NUMBER_OF_TILES = NUMBER_OF_ROWS * NUMBER_OF_COLUMNS;
+//static const int NUMBER_OF_ROWS = 32;
+//static const int NUMBER_OF_COLUMNS = 32;
+//static const int NUMBER_OF_TILES = NUMBER_OF_ROWS * NUMBER_OF_COLUMNS;
 
+/*
 enum RelativeAdjacencyIndex {
     north = -NUMBER_OF_COLUMNS, east = 1, south = NUMBER_OF_COLUMNS, west = -1,
     northeast = north + east, northwest = north + west,
     southeast = south + east, southwest = south + west
 };
+*/
 
-#endif //MAZE_ALGORITHMS_H
+class RelativeAdjacencyIndex {
+public:
+    explicit RelativeAdjacencyIndex(int numColumns) {
+        north = -numColumns;
+        east = 1;
+        south = numColumns;
+        west = -1;
+    }
+
+    int getNorth() const {
+        return north;
+    }
+
+    int getEast() const {
+        return east;
+    }
+
+    int getSouth() const {
+        return south;
+    }
+
+    int getWest() const {
+        return west;
+    }
+
+private:
+    int north;
+    int east;
+    int south;
+    int west;
+};
+
+#endif //MAZE_ALGORITHMS_UTILS_H

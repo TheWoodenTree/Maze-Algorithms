@@ -1,26 +1,77 @@
 #include <cassert>
-#include <algorithm>
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "utils.h"
-#include <iostream>
 #include <QMessageBox>
 #include <QThread>
 #include <queue>
+
+// Globals for tiles, columns, and rows. Necessary for window/grid resizing on startup.
+int numTiles;
+int numColumns;
+int numRows;
 
 std::default_random_engine MainWindow::m_generator; // NOLINT(cert-msc51-cpp)
 
 MainWindow::MainWindow(QWidget* parent) :
         QMainWindow(nullptr), ui(new Ui::MainWindow) {
     ui->setupUi(this);
+
     QObject::connect(ui->startButton, SIGNAL(clicked()),
-                     this, SLOT(breadthFirstSearch()));
+                     this, SLOT(callDepthFirstSearch()));
+
+    // Message box prompt that displays before the primary grid window. This prompts users to choose their desired
+    // maze size before creating the maze grid structure.
+    QMessageBox msgBox;
+    msgBox.setWindowTitle("Size Selection");
+    msgBox.setText("Please pick your preferred maze size from the options below.");
+    msgBox.setIcon(QMessageBox::Information);
+
+    // Buttons for user. The close button is said to never be accessed but its inclusion is necessary and the button
+    // itself functions.
+    QPushButton *small = msgBox.addButton("Small", QMessageBox::AcceptRole);
+    QPushButton *medium = msgBox.addButton("Medium", QMessageBox::AcceptRole);
+    QPushButton *large = msgBox.addButton("Large", QMessageBox::AcceptRole);
+    QPushButton *close = msgBox.addButton("Close", QMessageBox::RejectRole);
+    msgBox.exec();
+
+    // Perform different actions based on user choice. If the button clicked is small, medium, or large, set the
+    // window size and grid size to a fixed amount, begin setting up the grid, exit the message prompt, and open the
+    // main grid window. If the button clicked is close or the "X" button, close the program entirely.
+    if (msgBox.clickedButton() == small) {
+        this->setFixedSize(325,405);
+        numColumns = numRows = 16;
+        numTiles = numColumns * numRows;
+        setupTiles(parent);
+        return;
+    }
+    else if (msgBox.clickedButton() == medium) {
+        this->setFixedSize(530,679);
+        numColumns = numRows = 32;
+        numTiles = numColumns * numRows;
+        setupTiles(parent);
+        return;
+    }
+    else if (msgBox.clickedButton() == large) {
+        this->setFixedSize(786,935);
+        numColumns = numRows = 48;
+        numTiles = numColumns * numRows;
+        setupTiles(parent);
+        return;
+    }
+    else {
+        exit(0);
+    }
+}
+
+// Function that sets up the grid.
+void MainWindow::setupTiles(QWidget* parent) {
     const QSize TILE_SIZE(16, 16);
-    for (int i = 0; i < NUMBER_OF_TILES; ++i) {
+    for (int i = 0; i < numTiles; ++i) {
         Tile::Type tileType;
         if (i == 0)
             tileType = Tile::start;
-        else if (i == NUMBER_OF_TILES - 1)
+        else if (i == numTiles - 1)
             tileType = Tile::end;
         else
             tileType = Tile::empty;
@@ -44,7 +95,7 @@ MainWindow::MainWindow(QWidget* parent) :
         m_buttons.push_back(button);
         m_buttonMap.insert({tile, button});
 
-        ui->gridLayout->addWidget(m_buttons.back().get(), i / NUMBER_OF_COLUMNS, i % NUMBER_OF_ROWS);
+        ui->gridLayout->addWidget(m_buttons.back().get(), i / numRows, i % numColumns);
 
         QObject::connect(tile.get(), SIGNAL(stateChanged(std::shared_ptr<Tile>)),
                          this, SLOT(tileClicked(std::shared_ptr<Tile>)));
@@ -69,7 +120,7 @@ void MainWindow::sync() {
                             tile.get(), SLOT(flipAndEmitSignal()));
     }
     m_buttonMap.clear();
-    for (int i = 0; i < NUMBER_OF_TILES; ++i) { // Reconnect all buttons
+    for (int i = 0; i < numTiles; ++i) { // Reconnect all buttons
         m_buttons[i]->setTile(m_tiles[i]);
         m_buttonMap.insert({m_tiles[i], m_buttons[i]});
         std::shared_ptr<Tile> tile = m_buttons[i]->getTile();
@@ -100,47 +151,35 @@ void MainWindow::setAdjacentTiles() {
     for (const auto& tile : m_tiles) {
         tile->clearAdjacentTilesMap();
     }
-    for (int i = 0; i < NUMBER_OF_TILES; ++i) {
+
+    // Create class instance for direction.
+    RelativeAdjacencyIndex adjIdx(numColumns);
+
+    for (int i = 0; i < numTiles; ++i) {
 
         // Bools for making sure tiles on an edge do not have an adjacent tile set to a tile
         // which may be adjacent to it index-wise but is actually not adjacent to it on the grid
-        bool notLeftEdge = (i % NUMBER_OF_COLUMNS != 0);
-        bool notRightEdge = (i % NUMBER_OF_COLUMNS != NUMBER_OF_COLUMNS - 1);
+        bool notLeftEdge = (i % numColumns != 0);
+        bool notRightEdge = (i % numColumns != numColumns - 1);
 
         std::shared_ptr<Tile> currTile = m_tiles[i];
 
-        if (i + north >= 0) {
-            assert(m_tiles[i + north]);
-            currTile->setAdjacentTile(north, m_tiles[i + north]);
+        if (i + adjIdx.getNorth() >= 0) {
+            assert(m_tiles[i + adjIdx.getNorth()]);
+            currTile->setAdjacentTile(adjIdx.getNorth(), m_tiles[i + adjIdx.getNorth()]);
         }
-        if (notRightEdge && i + east < NUMBER_OF_TILES) {
-            assert(m_tiles[i + east]);
-            currTile->setAdjacentTile(east, m_tiles[i + east]);
+        if (notRightEdge && i + adjIdx.getEast() < numTiles) {
+            assert(m_tiles[i + adjIdx.getEast()]);
+            currTile->setAdjacentTile(adjIdx.getEast(), m_tiles[i + adjIdx.getEast()]);
         }
-        if (i + south < NUMBER_OF_TILES) {
-            assert(m_tiles[i + south]);
-            currTile->setAdjacentTile(south, m_tiles[i + south]);
+        if (i + adjIdx.getSouth() < numTiles) {
+            assert(m_tiles[i + adjIdx.getSouth()]);
+            currTile->setAdjacentTile(adjIdx.getSouth(), m_tiles[i + adjIdx.getSouth()]);
         }
-        if (notLeftEdge && i + west >= 0) {
-            assert(m_tiles[i + west]);
-            currTile->setAdjacentTile(west, m_tiles[i + west]);
+        if (notLeftEdge && i + adjIdx.getWest() >= 0) {
+            assert(m_tiles[i + adjIdx.getWest()]);
+            currTile->setAdjacentTile(adjIdx.getWest(), m_tiles[i + adjIdx.getWest()]);
         }
-//        if (notRightEdge && i + northeast >= 0) {
-//            assert(m_tiles[i + northeast]);
-//            currTile->setAdjacentTile(northeast, m_tiles[i + northeast]);
-//        }
-//        if (notLeftEdge && i + northwest >= 0) {
-//            assert(m_tiles[i + northwest]);
-//            currTile->setAdjacentTile(northwest, m_tiles[i + northwest]);
-//        }
-//        if (notRightEdge && i + southeast < NUMBER_OF_TILES) {
-//            assert(m_tiles[i + southeast]);
-//            currTile->setAdjacentTile(southeast, m_tiles[i + southeast]);
-//        }
-//        if (notLeftEdge && i + southwest < NUMBER_OF_TILES) {
-//            assert(m_tiles[i + southwest]);
-//            currTile->setAdjacentTile(southwest, m_tiles[i + southwest]);
-//        }
     }
 }
 
@@ -176,12 +215,15 @@ void MainWindow::breadthFirstSearch() {
 //            }
 //        }
 //    }
-depthFirstSearch(m_start);
 }
 
+// Calls depthFirstSearch. This is the only way for it to function properly at the moment.
+void MainWindow::callDepthFirstSearch() {
+    depthFirstSearch(m_start);
+}
 
-void MainWindow::depthFirstSearch(const std::shared_ptr<Tile>& tile) {
-    std::cout<<"test";
+// Depth first search algorithm.
+bool MainWindow::depthFirstSearch(const std::shared_ptr<Tile>& tile) {
     auto adjacentTilesMap = tile->getAdjacentTilesMap();
     for (const auto& pair : adjacentTilesMap) {
         std::shared_ptr<Tile> adjacentTile = pair.second;
@@ -190,9 +232,15 @@ void MainWindow::depthFirstSearch(const std::shared_ptr<Tile>& tile) {
             QThread::msleep(100);
             sync();
             QWidget::repaint();
-            depthFirstSearch(adjacentTile);
+            if(depthFirstSearch(adjacentTile))
+                return true;
+        }
+        else if (adjacentTile && adjacentTile->getType() == Tile::end){
+            sync();
+            return true;
         }
     }
+    return false;
 }
 
 

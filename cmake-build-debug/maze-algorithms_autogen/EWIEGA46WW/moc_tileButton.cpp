@@ -1,18 +1,27 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'tileButton.h'
 **
-** Created by: The Qt Meta Object Compiler version 68 (Qt 6.4.2)
+** Created by: The Qt Meta Object Compiler version 68 (Qt 6.6.0)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include <memory>
 #include "../../../tileButton.h"
 #include <QtCore/qmetatype.h>
+
+#if __has_include(<QtCore/qtmochelpers.h>)
+#include <QtCore/qtmochelpers.h>
+#else
+QT_BEGIN_MOC_NAMESPACE
+#endif
+
+
+#include <memory>
+
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'tileButton.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 68
-#error "This file was generated using the moc from 6.4.2. It"
+#error "This file was generated using the moc from 6.6.0. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -21,19 +30,28 @@
 #define Q_CONSTINIT
 #endif
 
-QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
+QT_WARNING_DISABLE_GCC("-Wuseless-cast")
 namespace {
-struct qt_meta_stringdata_TileButton_t {
+
+#ifdef QT_MOC_HAS_STRINGDATA
+struct qt_meta_stringdata_CLASSTileButtonENDCLASS_t {};
+static constexpr auto qt_meta_stringdata_CLASSTileButtonENDCLASS = QtMocHelpers::stringData(
+    "TileButton",
+    "rightClicked",
+    ""
+);
+#else  // !QT_MOC_HAS_STRING_DATA
+struct qt_meta_stringdata_CLASSTileButtonENDCLASS_t {
     uint offsetsAndSizes[6];
     char stringdata0[11];
     char stringdata1[13];
     char stringdata2[1];
 };
 #define QT_MOC_LITERAL(ofs, len) \
-    uint(sizeof(qt_meta_stringdata_TileButton_t::offsetsAndSizes) + ofs), len 
-Q_CONSTINIT static const qt_meta_stringdata_TileButton_t qt_meta_stringdata_TileButton = {
+    uint(sizeof(qt_meta_stringdata_CLASSTileButtonENDCLASS_t::offsetsAndSizes) + ofs), len 
+Q_CONSTINIT static const qt_meta_stringdata_CLASSTileButtonENDCLASS_t qt_meta_stringdata_CLASSTileButtonENDCLASS = {
     {
         QT_MOC_LITERAL(0, 10),  // "TileButton"
         QT_MOC_LITERAL(11, 12),  // "rightClicked"
@@ -44,12 +62,13 @@ Q_CONSTINIT static const qt_meta_stringdata_TileButton_t qt_meta_stringdata_Tile
     ""
 };
 #undef QT_MOC_LITERAL
+#endif // !QT_MOC_HAS_STRING_DATA
 } // unnamed namespace
 
-Q_CONSTINIT static const uint qt_meta_data_TileButton[] = {
+Q_CONSTINIT static const uint qt_meta_data_CLASSTileButtonENDCLASS[] = {
 
  // content:
-      10,       // revision
+      12,       // revision
        0,       // classname
        0,    0, // classinfo
        1,   14, // methods
@@ -70,11 +89,11 @@ Q_CONSTINIT static const uint qt_meta_data_TileButton[] = {
 
 Q_CONSTINIT const QMetaObject TileButton::staticMetaObject = { {
     QMetaObject::SuperData::link<QPushButton::staticMetaObject>(),
-    qt_meta_stringdata_TileButton.offsetsAndSizes,
-    qt_meta_data_TileButton,
+    qt_meta_stringdata_CLASSTileButtonENDCLASS.offsetsAndSizes,
+    qt_meta_data_CLASSTileButtonENDCLASS,
     qt_static_metacall,
     nullptr,
-    qt_incomplete_metaTypeArray<qt_meta_stringdata_TileButton_t,
+    qt_incomplete_metaTypeArray<qt_meta_stringdata_CLASSTileButtonENDCLASS_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<TileButton, std::true_type>,
         // method 'rightClicked'
@@ -113,7 +132,7 @@ const QMetaObject *TileButton::metaObject() const
 void *TileButton::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_TileButton.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_CLASSTileButtonENDCLASS.stringdata0))
         return static_cast<void*>(this);
     if (!strcmp(_clname, "std::enable_shared_from_this<TileButton>"))
         return static_cast< std::enable_shared_from_this<TileButton>*>(this);
@@ -143,4 +162,3 @@ void TileButton::rightClicked()
     QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
 }
 QT_WARNING_POP
-QT_END_MOC_NAMESPACE

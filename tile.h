@@ -51,11 +51,14 @@ public:
 
     bool isWall() const;
 
-    std::map<RelativeAdjacencyIndex, std::shared_ptr<Tile>> getAdjacentTilesMap();
+    //std::map<RelativeAdjacencyIndex, std::shared_ptr<Tile>> getAdjacentTilesMap();
+    std::map<int, std::shared_ptr<Tile>> getAdjacentTilesMap();
 
-    std::shared_ptr<Tile> getAdjacentTile(RelativeAdjacencyIndex direction);
+    //std::shared_ptr<Tile> getAdjacentTile(RelativeAdjacencyIndex direction);
+    std::shared_ptr<Tile> getAdjacentTile(int direction);
 
-    void setAdjacentTile(RelativeAdjacencyIndex direction, const std::shared_ptr<Tile> &tile);
+    //void setAdjacentTile(RelativeAdjacencyIndex direction, const std::shared_ptr<Tile> &tile);
+    void setAdjacentTile(int direction, const std::shared_ptr<Tile> &tile);
 
     void clearAdjacentTilesMap();
 
@@ -74,7 +77,10 @@ private:
     Type m_type;
     std::shared_ptr<Tile> m_north, m_east, m_south, m_west,
             m_northeast, m_northwest, m_southeast, m_southwest; // Adjacent tiles
-    std::map<RelativeAdjacencyIndex, std::shared_ptr<Tile>> m_adjacentTilesMap;
+
+    //std::map<RelativeAdjacencyIndex, std::shared_ptr<Tile>> m_adjacentTilesMap;
+    std::map<int, std::shared_ptr<Tile>> m_adjacentTilesMap;
+
     bool m_is_wall = false;
 };
 #endif // TILE_H

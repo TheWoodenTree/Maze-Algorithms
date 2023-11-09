@@ -1,18 +1,27 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'tile.h'
 **
-** Created by: The Qt Meta Object Compiler version 68 (Qt 6.4.2)
+** Created by: The Qt Meta Object Compiler version 68 (Qt 6.6.0)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include <memory>
 #include "../../../tile.h"
 #include <QtCore/qmetatype.h>
+
+#if __has_include(<QtCore/qtmochelpers.h>)
+#include <QtCore/qtmochelpers.h>
+#else
+QT_BEGIN_MOC_NAMESPACE
+#endif
+
+
+#include <memory>
+
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'tile.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 68
-#error "This file was generated using the moc from 6.4.2. It"
+#error "This file was generated using the moc from 6.6.0. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -21,11 +30,24 @@
 #define Q_CONSTINIT
 #endif
 
-QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
+QT_WARNING_DISABLE_GCC("-Wuseless-cast")
 namespace {
-struct qt_meta_stringdata_Tile_t {
+
+#ifdef QT_MOC_HAS_STRINGDATA
+struct qt_meta_stringdata_CLASSTileENDCLASS_t {};
+static constexpr auto qt_meta_stringdata_CLASSTileENDCLASS = QtMocHelpers::stringData(
+    "Tile",
+    "stateChanged",
+    "",
+    "std::shared_ptr<Tile>",
+    "tile",
+    "flip",
+    "flipAndEmitSignal"
+);
+#else  // !QT_MOC_HAS_STRING_DATA
+struct qt_meta_stringdata_CLASSTileENDCLASS_t {
     uint offsetsAndSizes[14];
     char stringdata0[5];
     char stringdata1[13];
@@ -36,8 +58,8 @@ struct qt_meta_stringdata_Tile_t {
     char stringdata6[18];
 };
 #define QT_MOC_LITERAL(ofs, len) \
-    uint(sizeof(qt_meta_stringdata_Tile_t::offsetsAndSizes) + ofs), len 
-Q_CONSTINIT static const qt_meta_stringdata_Tile_t qt_meta_stringdata_Tile = {
+    uint(sizeof(qt_meta_stringdata_CLASSTileENDCLASS_t::offsetsAndSizes) + ofs), len 
+Q_CONSTINIT static const qt_meta_stringdata_CLASSTileENDCLASS_t qt_meta_stringdata_CLASSTileENDCLASS = {
     {
         QT_MOC_LITERAL(0, 4),  // "Tile"
         QT_MOC_LITERAL(5, 12),  // "stateChanged"
@@ -56,12 +78,13 @@ Q_CONSTINIT static const qt_meta_stringdata_Tile_t qt_meta_stringdata_Tile = {
     "flipAndEmitSignal"
 };
 #undef QT_MOC_LITERAL
+#endif // !QT_MOC_HAS_STRING_DATA
 } // unnamed namespace
 
-Q_CONSTINIT static const uint qt_meta_data_Tile[] = {
+Q_CONSTINIT static const uint qt_meta_data_CLASSTileENDCLASS[] = {
 
  // content:
-      10,       // revision
+      12,       // revision
        0,       // classname
        0,    0, // classinfo
        3,   14, // methods
@@ -90,11 +113,11 @@ Q_CONSTINIT static const uint qt_meta_data_Tile[] = {
 
 Q_CONSTINIT const QMetaObject Tile::staticMetaObject = { {
     QMetaObject::SuperData::link<QObject::staticMetaObject>(),
-    qt_meta_stringdata_Tile.offsetsAndSizes,
-    qt_meta_data_Tile,
+    qt_meta_stringdata_CLASSTileENDCLASS.offsetsAndSizes,
+    qt_meta_data_CLASSTileENDCLASS,
     qt_static_metacall,
     nullptr,
-    qt_incomplete_metaTypeArray<qt_meta_stringdata_Tile_t,
+    qt_incomplete_metaTypeArray<qt_meta_stringdata_CLASSTileENDCLASS_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<Tile, std::true_type>,
         // method 'stateChanged'
@@ -139,7 +162,7 @@ const QMetaObject *Tile::metaObject() const
 void *Tile::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_Tile.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_CLASSTileENDCLASS.stringdata0))
         return static_cast<void*>(this);
     if (!strcmp(_clname, "std::enable_shared_from_this<Tile>"))
         return static_cast< std::enable_shared_from_this<Tile>*>(this);
@@ -170,4 +193,3 @@ void Tile::stateChanged(std::shared_ptr<Tile> _t1)
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 QT_WARNING_POP
-QT_END_MOC_NAMESPACE
