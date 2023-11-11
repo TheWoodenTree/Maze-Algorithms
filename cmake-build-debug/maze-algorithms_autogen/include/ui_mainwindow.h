@@ -164,7 +164,7 @@ public:
         pauseButton->setText(QCoreApplication::translate("MainWindow", "Pause Traversal", nullptr));
         startButton->setText(QCoreApplication::translate("MainWindow", "Start Traversal", nullptr));
         setStartButton->setText(QCoreApplication::translate("MainWindow", "Set Start", nullptr));
-        guantletButton->setText(QCoreApplication::translate("MainWindow", "Algorithm Guantlet", nullptr));
+        guantletButton->setText(QCoreApplication::translate("MainWindow", "Algorithm Gauntlet", nullptr));
         resetButton->setText(QCoreApplication::translate("MainWindow", "Reset Algorithm", nullptr));
     } // retranslateUi
 

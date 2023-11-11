@@ -52,29 +52,14 @@ bool Tile::isWall() const {
     return m_is_wall;
 }
 
-/*
-std::map<RelativeAdjacencyIndex, std::shared_ptr<Tile>> Tile::getAdjacentTilesMap() {
-    return m_adjacentTilesMap;
-}
- */
 std::map<int, std::shared_ptr<Tile>> Tile::getAdjacentTilesMap() {
     return m_adjacentTilesMap;
 }
 
-/*
-std::shared_ptr<Tile> Tile::getAdjacentTile(RelativeAdjacencyIndex direction) {
-    return m_adjacentTilesMap[direction];
-}
- */
 std::shared_ptr<Tile> Tile::getAdjacentTile(int direction) {
     return m_adjacentTilesMap[direction];
 }
 
-/*
-void Tile::setAdjacentTile(RelativeAdjacencyIndex direction, const std::shared_ptr<Tile>& tile) {
-    m_adjacentTilesMap.insert({direction, tile});
-}
- */
 void Tile::setAdjacentTile(int direction, const std::shared_ptr<Tile>& tile) {
     m_adjacentTilesMap.insert({direction, tile});
 }
