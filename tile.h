@@ -16,6 +16,10 @@ public:
         wall, empty, start, end, traverse
     };
 
+    enum NodeType {
+        vertex, edge
+    };
+
     explicit Tile(QObject *parent = nullptr, Type type = empty);
 
     [[nodiscard]] const QIcon &icon() const {
@@ -49,6 +53,9 @@ public:
 
     void setType(Type type);
 
+    NodeType getNodeType();
+    void setNodeType(NodeType nodeType);
+
     bool isWall() const;
 
     std::map<int, std::shared_ptr<Tile>> getAdjacentTilesMap();
@@ -58,6 +65,14 @@ public:
     void setAdjacentTile(int direction, const std::shared_ptr<Tile> &tile);
 
     void clearAdjacentTilesMap();
+
+    void setAdjacentEdgeVertex(int direction, const std::pair<std::shared_ptr<Tile>, std::shared_ptr<Tile>> &edgeVertexPair);
+    std::map<int, std::pair<std::shared_ptr<Tile>, std::shared_ptr<Tile>>> getAdjacentEdgeVerticesMap();
+    std::pair<std::shared_ptr<Tile>, std::shared_ptr<Tile>> getAdjacentEdgeVertex(int direction);
+    void clearAdjacentEdgeVerticesMap();
+
+    bool isConnectedToMaze() const;
+    void setConnectedToMaze(bool condition);
 
 signals:
 
@@ -72,9 +87,13 @@ public slots:
 private:
     QIcon m_empty;
     Type m_type;
+    NodeType n_type;
     std::shared_ptr<Tile> m_north, m_east, m_south, m_west,
             m_northeast, m_northwest, m_southeast, m_southwest; // Adjacent tiles
     std::map<int, std::shared_ptr<Tile>> m_adjacentTilesMap;
+
+    std::map<int, std::pair<std::shared_ptr<Tile>, std::shared_ptr<Tile>>> m_adjacentEdgeVertexMap;
+    bool m_isinMaze = false;
 
     bool m_is_wall = false;
 };

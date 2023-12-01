@@ -31,7 +31,7 @@ private slots:
 
     static void quit();
 
-    void sync();
+    void syncAll();
 
     void tileClicked(const std::shared_ptr<Tile>& tile);
 
@@ -41,9 +41,23 @@ private slots:
 
     void clearWalls();
 
+    void resetAlgorithm();
+
+    void setAdjacentVertices();
+
+    void initializeGraph();
+
+    void initializeMazeGen();
+
+    bool generateMaze(const std::shared_ptr<Tile>& tile);
+
+    void syncTile(const std::shared_ptr<Tile>& tile);
+
+    bool randomSearch(const std::shared_ptr<Tile>& tile);
+
     void breadthFirstSearch();
 
-    void callDepthFirstSearch();
+    void callAlgorithm();
 
     bool depthFirstSearch(const std::shared_ptr<Tile>& tile);
 
@@ -57,6 +71,10 @@ private:
     Ui::MainWindow* ui;
     std::vector<std::shared_ptr<TileButton>> m_buttons;
     std::vector<std::shared_ptr<Tile>> m_tiles;
+
+    std::vector<std::shared_ptr<Tile>> m_vertices;
+    std::vector<std::shared_ptr<Tile>> randomTiles;
+
     std::shared_ptr<Tile> m_start;
     std::shared_ptr<Tile> m_end;
     std::map<std::shared_ptr<Tile>, std::shared_ptr<TileButton>> m_buttonMap;

@@ -20,7 +20,10 @@
       <property name="spacing">
        <number>5</number>
       </property>
-      <item alignment="Qt::AlignTop">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetNoConstraint</enum>
+      </property>
+      <item>
        <widget class="QLabel" name="label">
         <property name="maximumSize">
          <size>
@@ -39,7 +42,7 @@
         </property>
        </widget>
       </item>
-      <item alignment="Qt::AlignTop">
+      <item>
        <widget class="QComboBox" name="algorithmBox">
         <property name="maximumSize">
          <size>
@@ -49,7 +52,7 @@
         </property>
         <item>
          <property name="text">
-          <string>Dijkstra's</string>
+          <string>Random</string>
          </property>
         </item>
         <item>
@@ -64,9 +67,6 @@
         </item>
        </widget>
       </item>
-      <item alignment="Qt::AlignRight|Qt::AlignTop">
-       <widget class="QLCDNumber" name="lcdNumber"/>
-      </item>
      </layout>
     </item>
     <item>
@@ -78,27 +78,6 @@
     </item>
     <item>
      <layout class="QGridLayout" name="gridLayout_2">
-      <item row="2" column="1">
-       <widget class="QPushButton" name="setEndButton">
-        <property name="text">
-         <string>Set End</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="0">
-       <widget class="QPushButton" name="clearButton">
-        <property name="text">
-         <string>Clear Walls</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="0">
-       <widget class="QPushButton" name="customButton">
-        <property name="text">
-         <string>Custom Maze</string>
-        </property>
-       </widget>
-      </item>
       <item row="0" column="0">
        <widget class="QPushButton" name="generateButton">
         <property name="text">
@@ -106,35 +85,21 @@
         </property>
        </widget>
       </item>
-      <item row="2" column="2">
-       <widget class="QPushButton" name="pauseButton">
+      <item row="0" column="1">
+       <widget class="QPushButton" name="clearButton">
         <property name="text">
-         <string>Pause Traversal</string>
+         <string>Clear Walls</string>
         </property>
        </widget>
       </item>
-      <item row="0" column="2">
+      <item row="1" column="0">
        <widget class="QPushButton" name="startButton">
         <property name="text">
          <string>Start Traversal</string>
         </property>
        </widget>
       </item>
-      <item row="0" column="1">
-       <widget class="QPushButton" name="setStartButton">
-        <property name="text">
-         <string>Set Start</string>
-        </property>
-       </widget>
-      </item>
-      <item row="6" column="2">
-       <widget class="QPushButton" name="guantletButton">
-        <property name="text">
-         <string>Algorithm Gauntlet</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="2">
+      <item row="1" column="1">
        <widget class="QPushButton" name="resetButton">
         <property name="text">
          <string>Reset Algorithm</string>

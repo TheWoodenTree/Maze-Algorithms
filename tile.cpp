@@ -48,6 +48,14 @@ void Tile::setType(Type type)  {
     }
 }
 
+Tile::NodeType Tile::getNodeType() {
+    return n_type;
+}
+
+void Tile::setNodeType(NodeType nodeType) {
+    n_type = nodeType;
+}
+
 bool Tile::isWall() const {
     return m_is_wall;
 }
@@ -66,6 +74,27 @@ void Tile::setAdjacentTile(int direction, const std::shared_ptr<Tile>& tile) {
 
 void Tile::clearAdjacentTilesMap() {
     m_adjacentTilesMap.clear();
+}
+
+std::map<int, std::pair<std::shared_ptr<Tile>, std::shared_ptr<Tile>>> Tile::getAdjacentEdgeVerticesMap() {
+    return m_adjacentEdgeVertexMap;
+}
+std::pair<std::shared_ptr<Tile>, std::shared_ptr<Tile>> Tile::getAdjacentEdgeVertex(int direction) {
+    return m_adjacentEdgeVertexMap[direction];
+}
+void Tile::setAdjacentEdgeVertex(int direction, const std::pair<std::shared_ptr<Tile>, std::shared_ptr<Tile>> &edgeVertexPair) {
+    m_adjacentEdgeVertexMap.insert({direction, edgeVertexPair});
+}
+void Tile::clearAdjacentEdgeVerticesMap() {
+    m_adjacentEdgeVertexMap.clear();
+}
+
+bool Tile::isConnectedToMaze() const {
+    return m_isinMaze;
+}
+
+void Tile::setConnectedToMaze(bool condition) {
+    m_isinMaze = condition;
 }
 
 void Tile::flip() {
