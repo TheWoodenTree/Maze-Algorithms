@@ -88,15 +88,18 @@ void MainWindow::setupTiles(QWidget* parent) {
         if (tileType == Tile::end)
             m_end = tile;
         m_tiles.push_back(tile);
-        std::shared_ptr<TileButton> button = std::make_shared<TileButton>(parent, tile);
+        std::shared_ptr<TileButton> button = std::make_shared<TileButton>(parent, tile, i / numRows, i % numColumns);
 
         button->setIcon(tile->icon());
         button->setIconSize(TILE_SIZE);
         button->setFixedSize(TILE_SIZE);
         button->setFlat(true);
+        button->setMouseTracking(true);
 
         QObject::connect(button.get(), SIGNAL(clicked()),
                          tile.get(), SLOT(flipAndEmitSignal()));
+        QObject::connect(button.get(), SIGNAL(drag(int, int)),
+                         this, SLOT(tileDraggedOver(int, int)));
 
         m_buttons.push_back(button);
         m_buttonMap.insert({tile, button});
@@ -119,6 +122,28 @@ MainWindow::~MainWindow() {
 
 void MainWindow::quit() {
     QApplication::quit();
+}
+
+void MainWindow::tileDraggedOver(int row, int col) {
+    // Assuming you have a way to access the TileButton at the specified row and col
+    TileButton* tileButton = getTileButtonAt(row, col);
+
+    if (tileButton) {
+        // Get the tile from the TileButton and flip it
+        std::shared_ptr<Tile> tile = tileButton->getTile();
+        if (tile->getType() == Tile::empty) {
+            tileClicked(tile);
+        }
+    }
+}
+
+TileButton* MainWindow::getTileButtonAt(int row, int col) {
+    for (const auto& button : m_buttons) {
+        if (button->getRow() == row && button->getColumn() == col) {
+            return button.get();
+        }
+    }
+    return nullptr;
 }
 
 void MainWindow::syncAll() {

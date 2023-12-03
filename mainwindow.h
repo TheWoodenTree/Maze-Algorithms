@@ -39,6 +39,10 @@ private slots:
 
     void setAdjacentTiles();
 
+    void tileDraggedOver(int row, int col);
+
+    TileButton* getTileButtonAt(int row, int col);
+
     void clearWalls();
 
     void resetAlgorithm();
