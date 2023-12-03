@@ -65,7 +65,6 @@ public:
         algorithmBox = new QComboBox(centralwidget);
         algorithmBox->addItem(QString());
         algorithmBox->addItem(QString());
-        algorithmBox->addItem(QString());
         algorithmBox->setObjectName("algorithmBox");
         algorithmBox->setMaximumSize(QSize(150, 16777215));
 
@@ -119,7 +118,6 @@ public:
         label->setText(QCoreApplication::translate("MainWindow", "Algorithms:", nullptr));
         algorithmBox->setItemText(0, QCoreApplication::translate("MainWindow", "Random", nullptr));
         algorithmBox->setItemText(1, QCoreApplication::translate("MainWindow", "Depth-First", nullptr));
-        algorithmBox->setItemText(2, QCoreApplication::translate("MainWindow", "Breadth-First", nullptr));
 
         generateButton->setText(QCoreApplication::translate("MainWindow", "Generate Maze", nullptr));
         clearButton->setText(QCoreApplication::translate("MainWindow", "Clear Walls", nullptr));

@@ -60,11 +60,6 @@
           <string>Depth-First</string>
          </property>
         </item>
-        <item>
-         <property name="text">
-          <string>Breadth-First</string>
-         </property>
-        </item>
        </widget>
       </item>
      </layout>

@@ -11,8 +11,6 @@ int numTiles;
 int numColumns;
 int numRows;
 
-std::default_random_engine MainWindow::m_generator; // NOLINT(cert-msc51-cpp)
-
 MainWindow::MainWindow(QWidget* parent) :
         QMainWindow(nullptr), ui(new Ui::MainWindow) {
     ui->setupUi(this);
@@ -45,21 +43,21 @@ MainWindow::MainWindow(QWidget* parent) :
     // window size and grid size to a fixed amount, begin setting up the grid, exit the message prompt, and open the
     // main grid window. If the button clicked is close or the "X" button, close the program entirely.
     if (msgBox.clickedButton() == small) {
-        this->setFixedSize(325,405);
+        this->setFixedSize(250,370);
         numColumns = numRows = 15;
         numTiles = numColumns * numRows;
         setupTiles(parent);
         return;
     }
     else if (msgBox.clickedButton() == medium) {
-        this->setFixedSize(530,679);
+        this->setFixedSize(450,600);
         numColumns = numRows = 31;
         numTiles = numColumns * numRows;
         setupTiles(parent);
         return;
     }
     else if (msgBox.clickedButton() == large) {
-        this->setFixedSize(786,935);
+        this->setFixedSize(700,850);
         numColumns = numRows = 47;
         numTiles = numColumns * numRows;
         setupTiles(parent);
@@ -182,9 +180,6 @@ void MainWindow::tileClicked(const std::shared_ptr<Tile>& tile) {
     syncAll();
 }
 
-void MainWindow::tileRightClicked(const std::shared_ptr<Tile>& tile) {
-}
-
 void MainWindow::setAdjacentTiles() {
     for (const auto& tile : m_tiles) {
         tile->clearAdjacentTilesMap();
@@ -272,11 +267,6 @@ void MainWindow::clearWalls() {
         }
     }
 
-    //setAdjacentTiles();
-    //syncAll();
-    //initializeGraph();
-    //setAdjacentTiles();
-
     // Unblock generate button to allow presses.
     ui->generateButton->blockSignals(false);
 
@@ -290,39 +280,9 @@ void MainWindow::resetAlgorithm() {
             m_tiles[i]->setType(Tile::empty);
         }
     }
+
     setAdjacentTiles();
     syncAll();
-}
-
-void MainWindow::breadthFirstSearch() {
-//    std::vector<std::shared_ptr<Tile>> visited;
-//    std::queue<std::shared_ptr<Tile>> q;
-//    q.push(m_start->getAdjacentTile(south));
-//    std::cout<< m_start->getAdjacentTilesMap().size();
-//    while (!q.empty()){
-//        std::shared_ptr<Tile> tile = q.back();
-//        std::cout<< tile;
-//        q.pop();
-//        auto adjacentTilesMap = tile->getAdjacentTilesMap();
-//        for (const auto& pair : adjacentTilesMap) {
-//            std::shared_ptr<Tile> adjacentTile = pair.second;
-//            bool tileVisited = false;
-//            for (const auto& visitedTile : visited){
-//                if (adjacentTile == visitedTile){
-//                    tileVisited = true;
-//                    break;
-//                }
-//            }
-//            if (!tileVisited){
-//                visited.push_back(adjacentTile);
-//                q.push(adjacentTile);
-//                adjacentTile->setType(Tile::traverse);
-//                QThread::sleep(1);
-//                syncAll();
-//                QWidget::repaint();
-//            }
-//        }
-//    }
 }
 
 // Calls a search algorithm depending on user choice.
@@ -420,34 +380,6 @@ bool MainWindow::randomSearch(const std::shared_ptr<Tile> &tile) {
     return false;
 }
 
-void MainWindow::revealConnectedTiles(const std::shared_ptr<Tile>& tile) { // NOLINT(misc-no-recursion)
-//    Tile::Type tileType = tile->getType();
-//    auto adjacentTilesMap = tile->getAdjacentTilesMap();
-//    for (const auto& pair : adjacentTilesMap) {
-//        std::shared_ptr<Tile> adjacentTile = pair.second;
-//        Tile::Type adjTileType = adjacentTile->getType();
-//        if (!adjacentTile->isWall() && tileType == Tile::empty) {
-//            if (adjTileType == Tile::empty) {
-//                adjacentTile->flip();
-//                m_numClearedTiles += 1;
-//                revealConnectedTiles(adjacentTile);
-//            }
-//            else if (adjTileType != Tile::mine) {
-//                adjacentTile->flip();
-//                m_numClearedTiles += 1;
-//            }
-//        }
-//    }
-}
-
-void MainWindow::message(const QString& message) const {
-    auto messageBox = new QMessageBox(QMessageBox::Information, "Maze Algorithms", message);
-    messageBox->setAttribute(Qt::WA_DeleteOnClose, true);
-    QObject::connect(messageBox, SIGNAL(buttonClicked(QAbstractButton*)),
-                     this, SLOT(reset(QAbstractButton*)));
-    messageBox->exec();
-}
-
 void MainWindow::initializeGraph() {
 
     int row;
@@ -463,7 +395,7 @@ void MainWindow::initializeGraph() {
             m_vertices.push_back(m_tiles[i]);
         }
 
-            // Edges
+        // Edges
         else if ((row + column) % 2 == 1) {
             m_tiles[i]->setNodeType(Tile::edge);
         }
@@ -476,6 +408,9 @@ void MainWindow::initializeMazeGen() {
 
     // Reset algorithm just in case user forgets to do so before making a new maze.
     resetAlgorithm();
+
+    // Clear walls just in case user drew on board before deciding to generate.
+    clearWalls();
 
     int row;
     int column;

@@ -1,68 +1,61 @@
 # ninja log v5
-36	1543	1699387406467136000	maze-algorithms_autogen/timestamp	e64d55f2c8150bbd
+6	498	7232853335364048	maze-algorithms_autogen/timestamp	bef2eea74782ed3d
 2	259	7231602803152597	build.ninja	9dabe67644a64eed
-36	1543	1699387406467136000	maze-algorithms_autogen/mocs_compilation.cpp	e64d55f2c8150bbd
+6	498	7232853335364048	maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
 40	1452	1699383982123438000	mine-sweeper_autogen/mocs_compilation.cpp	596b0d681995b9df
-1002	1063	1699383423266644670	mine-sweeper_autogen/EWIEGA46WW/qrc_tiles.cpp	7dd88a37be62a0a6
-7096	7590	1699387412530580673	maze-algorithms	a68f285bd358bc0e
-730	766	1699384101688359716	maze-algorithms_autogen/EWIEGA46WW/qrc_tiles.cpp	11e467d0009e4e48
-40	1452	1699383982123438000	mine-sweeper_autogen/timestamp	596b0d681995b9df
-1	1139	7231603643521528	maze-algorithms_autogen/timestamp	bef2eea74782ed3d
-1	1139	7231603643521528	maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
-1	1139	7231603643521528	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/timestamp	bef2eea74782ed3d
-1	1139	7231603643521528	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
-1440	1664	7231603651270796	maze-algorithms_autogen/EWIEGA46WW/qrc_tiles.cpp	a468b223528ecf02
-1440	1664	7231603651270796	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/EWIEGA46WW/qrc_tiles.cpp	a468b223528ecf02
 1677	1770	7231603652776787	CMakeFiles/maze-algorithms.dir/maze-algorithms_autogen/EWIEGA46WW/qrc_tiles.cpp.obj	328a755e66bb141b
-1667	4464	7231603679694816	CMakeFiles/maze-algorithms.dir/tile.cpp.obj	5ada0d01c26bbbf3
-1682	4642	7231603681490013	CMakeFiles/maze-algorithms.dir/tileButton.cpp.obj	9fa77bd8eba53f4a
-1673	4837	7231603683444793	CMakeFiles/maze-algorithms.dir/main.cpp.obj	a2bff46cc305aa86
-1664	5018	7231603685249953	CMakeFiles/maze-algorithms.dir/maze-algorithms_autogen/mocs_compilation.cpp.obj	197a61fe0a5b8477
-1670	5717	7231603692221641	CMakeFiles/maze-algorithms.dir/mainwindow.cpp.obj	26fba5aec8a2fc21
-5718	6340	7231603698434715	maze-algorithms.exe	b1765872681f9891
-11	1235	7231617610028822	maze-algorithms_autogen/timestamp	bef2eea74782ed3d
-11	1235	7231617610028822	maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
-11	1235	7231617610028822	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/timestamp	bef2eea74782ed3d
-11	1235	7231617610028822	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
-1248	3817	7231617638066755	CMakeFiles/maze-algorithms.dir/tileButton.cpp.obj	9fa77bd8eba53f4a
-1242	3836	7231617638256245	CMakeFiles/maze-algorithms.dir/main.cpp.obj	a2bff46cc305aa86
-1239	3876	7231617638655177	CMakeFiles/maze-algorithms.dir/tile.cpp.obj	5ada0d01c26bbbf3
-1236	3923	7231617639133895	CMakeFiles/maze-algorithms.dir/maze-algorithms_autogen/mocs_compilation.cpp.obj	197a61fe0a5b8477
-1245	4922	7231617649097271	CMakeFiles/maze-algorithms.dir/mainwindow.cpp.obj	26fba5aec8a2fc21
-4922	6664	7231617666498820	maze-algorithms.exe	b1765872681f9891
-6	298	7231619395227708	maze-algorithms_autogen/timestamp	bef2eea74782ed3d
-6	298	7231619395227708	maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
-6	298	7231619395227708	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/timestamp	bef2eea74782ed3d
-6	298	7231619395227708	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
-306	4104	7231619433266347	CMakeFiles/maze-algorithms.dir/mainwindow.cpp.obj	26fba5aec8a2fc21
-4104	4794	7231619440145738	maze-algorithms.exe	b1765872681f9891
-6	333	7231622435121608	maze-algorithms_autogen/timestamp	bef2eea74782ed3d
-6	333	7231622435121608	maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
-6	333	7231622435121608	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/timestamp	bef2eea74782ed3d
-6	333	7231622435121608	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
-341	3994	7231622471710228	CMakeFiles/maze-algorithms.dir/mainwindow.cpp.obj	26fba5aec8a2fc21
-3994	4690	7231622478650021	maze-algorithms.exe	b1765872681f9891
-6	300	7231623225967888	maze-algorithms_autogen/timestamp	bef2eea74782ed3d
-6	300	7231623225967888	maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
-6	300	7231623225967888	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/timestamp	bef2eea74782ed3d
-6	300	7231623225967888	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
-307	4468	7231623267626187	CMakeFiles/maze-algorithms.dir/mainwindow.cpp.obj	26fba5aec8a2fc21
-4468	5166	7231623274579320	maze-algorithms.exe	b1765872681f9891
-6	518	7231624191304327	maze-algorithms_autogen/timestamp	bef2eea74782ed3d
-6	518	7231624191304327	maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
-6	518	7231624191304327	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/timestamp	bef2eea74782ed3d
-6	518	7231624191304327	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
-527	3971	7231624225813999	CMakeFiles/maze-algorithms.dir/mainwindow.cpp.obj	26fba5aec8a2fc21
-3971	4773	7231624233815657	maze-algorithms.exe	b1765872681f9891
-10	577	7231624560186976	maze-algorithms_autogen/timestamp	bef2eea74782ed3d
-10	577	7231624560186976	maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
-10	577	7231624560186976	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/timestamp	bef2eea74782ed3d
-10	577	7231624560186976	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
-585	4010	7231624594485283	CMakeFiles/maze-algorithms.dir/mainwindow.cpp.obj	26fba5aec8a2fc21
-4010	5165	7231624606008036	maze-algorithms.exe	b1765872681f9891
-5	389	7231624999790966	maze-algorithms_autogen/timestamp	bef2eea74782ed3d
-5	389	7231624999790966	maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
-5	389	7231624999790966	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/timestamp	bef2eea74782ed3d
-5	389	7231624999790966	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
-397	3441	7231625030278271	CMakeFiles/maze-algorithms.dir/mainwindow.cpp.obj	26fba5aec8a2fc21
-3441	4134	7231625037192231	maze-algorithms.exe	b1765872681f9891
+1002	1063	1699383423266644670	mine-sweeper_autogen/EWIEGA46WW/qrc_tiles.cpp	7dd88a37be62a0a6
+818	3746	7232847499109419	CMakeFiles/maze-algorithms.dir/maze-algorithms_autogen/mocs_compilation.cpp.obj	197a61fe0a5b8477
+40	1452	1699383982123438000	mine-sweeper_autogen/timestamp	596b0d681995b9df
+1440	1664	7231603651270796	maze-algorithms_autogen/EWIEGA46WW/qrc_tiles.cpp	a468b223528ecf02
+7096	7590	1699387412530580673	maze-algorithms	a68f285bd358bc0e
+6	498	7232853335364048	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/timestamp	bef2eea74782ed3d
+6	498	7232853335364048	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
+1440	1664	7231603651270796	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/EWIEGA46WW/qrc_tiles.cpp	a468b223528ecf02
+824	3190	7232847493534030	CMakeFiles/maze-algorithms.dir/tile.cpp.obj	5ada0d01c26bbbf3
+831	3420	7232847495847839	CMakeFiles/maze-algorithms.dir/tileButton.cpp.obj	9fa77bd8eba53f4a
+821	3426	7232847495907675	CMakeFiles/maze-algorithms.dir/main.cpp.obj	a2bff46cc305aa86
+510	5132	7232853381690195	CMakeFiles/maze-algorithms.dir/mainwindow.cpp.obj	26fba5aec8a2fc21
+5132	5916	7232853389529566	maze-algorithms.exe	b1765872681f9891
+6	375	7232854025774003	maze-algorithms_autogen/timestamp	bef2eea74782ed3d
+6	375	7232854025774003	maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
+6	375	7232854025774003	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/timestamp	bef2eea74782ed3d
+6	375	7232854025774003	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
+385	4991	7232854071930934	CMakeFiles/maze-algorithms.dir/mainwindow.cpp.obj	26fba5aec8a2fc21
+4991	5740	7232854079368509	maze-algorithms.exe	b1765872681f9891
+10	383	7232854219832634	maze-algorithms_autogen/timestamp	bef2eea74782ed3d
+10	383	7232854219832634	maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
+10	383	7232854219832634	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/timestamp	bef2eea74782ed3d
+10	383	7232854219832634	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
+395	4390	7232854259905799	CMakeFiles/maze-algorithms.dir/mainwindow.cpp.obj	26fba5aec8a2fc21
+4390	5076	7232854266737913	maze-algorithms.exe	b1765872681f9891
+5	329	7232854548659030	maze-algorithms_autogen/timestamp	bef2eea74782ed3d
+5	329	7232854548659030	maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
+5	329	7232854548659030	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/timestamp	bef2eea74782ed3d
+5	329	7232854548659030	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
+339	4346	7232854588811698	CMakeFiles/maze-algorithms.dir/mainwindow.cpp.obj	26fba5aec8a2fc21
+4346	5059	7232854595929637	maze-algorithms.exe	b1765872681f9891
+6	325	7232854761787417	maze-algorithms_autogen/timestamp	bef2eea74782ed3d
+6	325	7232854761787417	maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
+6	325	7232854761787417	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/timestamp	bef2eea74782ed3d
+6	325	7232854761787417	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
+338	4182	7232854800384561	CMakeFiles/maze-algorithms.dir/mainwindow.cpp.obj	26fba5aec8a2fc21
+4183	4994	7232854808478930	maze-algorithms.exe	b1765872681f9891
+7	333	7232855843797143	maze-algorithms_autogen/timestamp	bef2eea74782ed3d
+7	333	7232855843797143	maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
+7	333	7232855843797143	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/timestamp	bef2eea74782ed3d
+7	333	7232855843797143	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
+341	4152	7232855881975080	CMakeFiles/maze-algorithms.dir/mainwindow.cpp.obj	26fba5aec8a2fc21
+4152	4843	7232855888861728	maze-algorithms.exe	b1765872681f9891
+6	349	7232856041029319	maze-algorithms_autogen/timestamp	bef2eea74782ed3d
+6	349	7232856041029319	maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
+6	349	7232856041029319	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/timestamp	bef2eea74782ed3d
+6	349	7232856041029319	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
+362	4708	7232856084623012	CMakeFiles/maze-algorithms.dir/mainwindow.cpp.obj	26fba5aec8a2fc21
+4709	5529	7232856092790953	maze-algorithms.exe	b1765872681f9891
+6	315	7232856916515447	maze-algorithms_autogen/timestamp	bef2eea74782ed3d
+6	315	7232856916515447	maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
+6	315	7232856916515447	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/timestamp	bef2eea74782ed3d
+6	315	7232856916515447	D:/CS 498 Github/Maze-Algorithms/cmake-build-debug/maze-algorithms_autogen/mocs_compilation.cpp	bef2eea74782ed3d
+326	4344	7232856956798060	CMakeFiles/maze-algorithms.dir/mainwindow.cpp.obj	26fba5aec8a2fc21
+4345	5040	7232856963734470	maze-algorithms.exe	b1765872681f9891

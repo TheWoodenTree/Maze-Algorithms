@@ -21,12 +21,6 @@ public:
 
     ~MainWindow() override;
 
-
-
-signals:
-
-    void boardGenerated();
-
 private slots:
 
     static void quit();
@@ -34,8 +28,6 @@ private slots:
     void syncAll();
 
     void tileClicked(const std::shared_ptr<Tile>& tile);
-
-    void tileRightClicked(const std::shared_ptr<Tile>& tile);
 
     void setAdjacentTiles();
 
@@ -59,15 +51,9 @@ private slots:
 
     bool randomSearch(const std::shared_ptr<Tile>& tile);
 
-    void breadthFirstSearch();
-
     void callAlgorithm();
 
     bool depthFirstSearch(const std::shared_ptr<Tile>& tile);
-
-    void revealConnectedTiles(const std::shared_ptr<Tile>& tile);
-
-    void message(const QString& message) const;
 
     void setupTiles(QWidget* parent);
 
@@ -82,7 +68,6 @@ private:
     std::shared_ptr<Tile> m_start;
     std::shared_ptr<Tile> m_end;
     std::map<std::shared_ptr<Tile>, std::shared_ptr<TileButton>> m_buttonMap;
-    static std::default_random_engine m_generator;
 };
 
 #endif // MAINWINDOW_H
